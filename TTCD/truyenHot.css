@@ -1,0 +1,100 @@
+.web-truyen {
+    padding: 50px;
+    font-family: Helvetica;
+    margin-top: -10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.story-list {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.story-list h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.stories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.story {
+    width: calc(25% - 20px); /* 25% mỗi truyện - khoảng cách giữa các truyện */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.story:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ranking {
+    flex: 1;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ranking h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ranking ul {
+    list-style-type: none;
+}
+
+.ranking li {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.ranking li:hover {
+    background-color: #e9e9e9;
+}
+/*Nền truyện*/
+.story {
+    width: calc(25% - 20px); /* 25% mỗi truyện - khoảng cách giữa các truyện */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 2px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.story-image {
+    width: 168px;
+    height: 210px;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.story-title {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}

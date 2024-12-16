@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Truyện</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.story-list {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.story-list h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.stories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.story {
+    width: calc(25% - 20px); /* 25% mỗi truyện - khoảng cách giữa các truyện */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.story:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ranking {
+    flex: 1;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ranking h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.ranking ul {
+    list-style-type: none;
+}
+
+.ranking li {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.ranking li:hover {
+    background-color: #e9e9e9;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Khu vực danh sách truyện -->
+        <div class="story-list">
+            <h2>Danh Sách Truyện</h2>
+            <div class="stories">
+                <div class="story">Truyện 1</div>
+                <div class="story">Truyện 2</div>
+                <div class="story">Truyện 3</div>
+                <div class="story">Truyện 4</div>
+                <div class="story">Truyện 5</div>
+                <div class="story">Truyện 6</div>
+                <div class="story">Truyện 7</div>
+                <div class="story">Truyện 8</div>
+            </div>
+        </div>
+
+        <!-- Khu vực bảng xếp hạng -->
+        <div class="ranking">
+            <h2>Bảng Xếp Hạng</h2>
+            <ul>
+                <li>Truyện A</li>
+                <li>Truyện B</li>
+                <li>Truyện C</li>
+                <li>Truyện D</li>
+                <li>Truyện E</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

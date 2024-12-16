@@ -1,0 +1,24 @@
+/*căn 2 bên lề*/
+.grid{
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+/*Kiểu nút*/
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.btn--ptimary{
+    color: white;
+    background-color: #3f3567;
+}
+.btn.btn--size-s{
+    height: 20px;
+    font-size: 15px;
+}

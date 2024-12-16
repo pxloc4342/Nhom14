@@ -1,0 +1,234 @@
+.app{
+    font-family: Helvetica;
+}
+.header{
+    height: 70px;
+    background-color:#0d6f6e;
+    max-height:100% ;
+    margin: 0;
+    max-width: 100%;
+
+}
+
+.tk{
+    color: #0d6f6e;
+    min-width: 100px;
+    height: 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 1px;
+    margin-right: 10px;
+}
+.tk:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color:#cdeefa ;
+}
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin: 14px 0 0 0;
+    margin-left: 35px;
+}
+.header__navbar-item{
+    margin: 0px;
+}
+.header__navbar-item{
+    display: inline-block;
+    font-size: 16px;
+    /*bỏ gạch chân*/
+    text-decoration: none;
+}
+
+/*Menu đa cấp tk*/
+/* Tổng quát */
+.header_navbar-list1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header_navbar-item1 {
+  position: relative; /* Để menu con nằm tương đối với phần tử cha */
+}
+
+.header_navbar-item2 {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*dòng 2*/
+
+.header__logo-img-book{
+    font-size: 40px; 
+  
+}
+.header__navbar1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list1{
+    height: 15px;
+    color: #cdeefa;
+    margin-right: 40px;
+}
+.header__navbar{
+    background-color: rgb(228, 228, 228);
+    font-family: Helvetica;
+    height: 45px;
+}
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 17px;
+    color: #333333;
+    /*bỏ gạch chân*/
+    text-decoration: none;
+}
+.header__navbar-item1{
+    margin-right: 45px;
+}
+#search-box{
+    background: #fff;
+    border-radius: 30px;
+}
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px 17px;
+    font-size: 18px;
+    width: 400px;
+}
+#search-box #search-btn{
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 50%;
+}
+/*Tài khoản*/
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.modal__body{
+    background-color: white;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+}
+/*Xác thực*/
+
+.auth-form__container{
+    padding: 0 32px;
+}
+/*Đăng ký*/
+.auth-form{
+    width: 500px;
+}
+.auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
+}
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #333333;
+}
+.auth-form__switch-btn{
+   font-size: 1.6rem;
+   font-weight: 400;
+   color: #0d6f6e;
+   cursor: pointer;
+}
+
+.auth-form__input{
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 0.8rem;
+    border-radius: 2px;
+    border: 1px solid #dbdbdb;
+    outline: none;
+}
+.auth-form__input:focus{
+    border-color: #888;
+}
+.auth-form__aside{
+    margin-top: 18px;
+    margin-bottom: 70px;
+}
+.auth-form__policy-text{
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    text-align: center;
+    padding: 0 12px;
+}
+.auth-form__text-link{
+    color: #0d6f6e;
+    text-decoration: none;
+    
+}
+.auth-form__controls{
+    display: flex;
+    justify-content: flex-end;
+}
+/*fb, gg*/
+.auth-form__socilas{
+    background-color: #ebebeb ;
+    margin-top: 25px; 
+    padding: 12px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.auth-form__controls-back{
+    margin-right: 8px;
+}
+.auth-form__socilas-icon{
+    margin-right: 5px;
+}
+
+.auth-form__socilas--facebook{
+    color: white;
+    background-color: #3a5a98;
+}
+.auth-form__socilas--facebook,
+.auth-form__socilas-icon{
+    padding: 5px 12px;
+    border-radius: 3px;  
+} 
+.auth-form__socilas--google{
+    background-color: white;
+    color: #666;
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+
+
