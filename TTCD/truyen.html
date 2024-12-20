@@ -5,8 +5,9 @@
   <title>Document</title>
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="truyenHot.css">
+  <link rel="stylesheet" href="truyenMoiCapNhat.css">
   <link rel="stylesheet" href="menu_dacap.css">
+  <link rel="stylesheet" href="3_slide.css">
   <link rel="stylesheet" href="fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
 </head>
 <body>
@@ -163,61 +164,246 @@
       </ul>
       </nav>
   </div>
+  <nav class="slide">
+    <h2>Truyện Hot</h2>
+    <div class="slide-container">
+        <button class="arrow-left"><i class="fas fa-arrow-left"></i></button>
+        <div class="slide-show">
+            <div class="list-images">
+                <a class="images" href="#">
+                    <img src="img/tải xuống1.jfif" alt="Nhà có 5 nàng tiên">
+                    <p>Nhà có 5 nàng tiên</p>
+                </a>
+                <a class="images" href="#">
+                    <img src="img/tải xuống1.jfif" alt="Truyện 2">
+                    <p>Truyện 2</p>
+                </a>
+                <a class="images" href="#">
+                    <img src="img/tải xuống1.jfif" alt="Truyện 3">
+                    <p>Truyện 3</p>
+                </a>
+                <a class="images" href="#">
+                    <img src="img/tải xuống1.jfif" alt="Truyện 4">
+                    <p>Truyện 4</p>
+                </a>
+                <a class="images" href="#">
+                    <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                    <p>Truyện 5</p>
+                </a>
+                <a class="images" href="#">
+                    <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                    <p>Truyện 5</p>
+                </a>
+                <a class="images" href="#">
+                  <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                  <p>truyện chính</p>
+                </a>
+                <a class="images" href="#">
+                  <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                  <p>Truyện 5</p>
+                </a>
+                <a class="images" href="#">
+                  <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                  <p>Truyện 5</p>
+                </a>
+                <a class="images" href="#">
+                  <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                  <p>Truyện 5</p>
+                </a>
+                <a class="images" href="#">
+                  <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                  <p>Truyện 5</p>
+                </a>
+                <a class="images" href="#">
+                  <img src="img/tải xuống1.jfif" alt="Truyện 5">
+                  <p>Truyện 5</p>
+                </a>
+                
+            </div>
+        </div>
+        <button class="arrow-right"><i class="fas fa-arrow-right"></i></button>
+    </div>
+  </nav>
+<!--java truyen hot-->
+  <script>
+     // JavaScript
+     const slideShow = document.querySelector('.list-images');
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+        const images = document.querySelectorAll('.images');
+
+        let currentIndex = 0;
+        const imageWidth = document.querySelector('.images').offsetWidth + 20; // Kích thước ảnh + khoảng cách
+        const totalImages = images.length;
+
+        // Hàm cập nhật vị trí
+        function updatePosition() {
+            slideShow.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        }
+
+        // Hàm cuộn sang phải
+        arrowRight.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex > 6) {
+                currentIndex = 0; // Quay lại ảnh đầu
+            }
+            updatePosition();
+        });
+
+        // Hàm cuộn sang trái
+        arrowLeft.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = 7; // Quay lại "truyện thứ 8"
+            }
+            updatePosition();
+        });
+
+        // Tự động cuộn mỗi 4 giây
+        setInterval(() => {
+            arrowRight.click();
+        }, 4000);
+  </script>
+
     <nav class="web-truyen">
         <div class="container">
             <!-- Khu vực danh sách truyện -->
             <div class="story-list">
-                <h2>Danh Sách Truyện</h2>
+                <h2>Truyện Mới Cập Nhật:</h2>
                 <div class="stories">
                   <div class="story">
-                      <img src="img/8.jpg" alt="Truyện 1" class="story-image">
-                      <p class="story-title">Truyện 1</p>
+                      <img src="img/tải xuống1.jfif" alt="Truyện 1" class="story-image">
+                      <p class="story-title">Nhà có 5 nàng tiên</p>
                   </div>
                   <div class="story">
-                      <img src="path/to/image2.jpg" alt="Truyện 2" class="story-image">
+                      <img src="img/tải xuống2.jfif" alt="Truyện 2" class="story-image">
                       <p class="story-title">Truyện 2</p>
                   </div>
                   <div class="story">
-                      <img src="path/to/image3.jpg" alt="Truyện 3" class="story-image">
+                      <img src="img/tải xuống3.jfif" alt="Truyện 3" class="story-image">
                       <p class="story-title">Truyện 3</p>
                   </div>
                   <div class="story">
-                      <img src="path/to/image4.jpg" alt="Truyện 4" class="story-image">
+                      <img src="img/tải xuống4.jfif" alt="Truyện 4" class="story-image">
                       <p class="story-title">Truyện 4</p>
                   </div>
                   <div class="story">
-                    <img src="img/8.jpg" alt="Truyện 1" class="story-image">
+                    <img src="img/tải xuống4.jfif" alt="Truyện 1" class="story-image">
                     <p class="story-title">Truyện 1</p>
                 </div>
                 <div class="story">
-                    <img src="path/to/image2.jpg" alt="Truyện 2" class="story-image">
+                    <img src="img/tải xuống3.jfif" alt="Truyện 2" class="story-image">
                     <p class="story-title">Truyện 2</p>
                 </div>
                 <div class="story">
-                    <img src="path/to/image3.jpg" alt="Truyện 3" class="story-image">
+                    <img src="img/tải xuống2.jfif" alt="Truyện 3" class="story-image">
                     <p class="story-title">Truyện 3</p>
                 </div>
                 <div class="story">
-                    <img src="path/to/image4.jpg" alt="Truyện 4" class="story-image">
+                    <img src="img/tải xuống1.jfif" alt="Truyện 4" class="story-image">
                     <p class="story-title">Truyện 4</p>
-                </div>
+                </div>                
               </div>
               
             </div>
     
             <!-- Khu vực bảng xếp hạng -->
             <div class="ranking">
-                <h2>Bảng Xếp Hạng</h2>
-                <ul>
-                    <li>Truyện A</li>
-                    <li>Truyện B</li>
-                    <li>Truyện C</li>
-                    <li>Truyện D</li>
-                    <li>Truyện E</li>
-                </ul>
-            </div>
-        </div>
-
+              <h2>Bảng Xếp Hạng</h2>
+              <div class="ranking-tabs">
+                  <div class="ranking-tab active" data-tab="month">Top Tháng</div>
+                  <div class="ranking-tab" data-tab="week">Top Tuần</div>
+                  <div class="ranking-tab" data-tab="day">Top Ngày</div>
+              </div>
+              <ul class="ranking-list active" id="month">
+                  <li class="ranking-item">
+                      <span class="ranking-number">01</span>
+                      <div class="ranking-image">
+                          <img src="img/tải xuống1.jfif" alt="Truyện A">
+                      </div>
+                      <div class="ranking-details">
+                          <a href="#" class="ranking-title">Truyện A (Tháng)</a>
+                          <p class="ranking-chapters">20 Chapters</p>
+                      </div>
+                  </li>
+                  <li class="ranking-item">
+                      <span class="ranking-number">02</span>
+                      <div class="ranking-image">
+                          <img src="img/tải xuống1.jfif" alt="Truyện B">
+                      </div>
+                      <div class="ranking-details">
+                          <a href="#" class="ranking-title">Truyện B (Tháng)</a>
+                          <p class="ranking-chapters">15 Chapters</p>
+                      </div>
+                  </li>
+              </ul>
+              <ul class="ranking-list" id="week">
+                  <li class="ranking-item">
+                      <span class="ranking-number">01</span>
+                      <div class="ranking-image">
+                          <img src="img/tải xuống1.jfif" alt="Truyện C">
+                      </div>
+                      <div class="ranking-details">
+                          <a href="#" class="ranking-title">Truyện C (Tuần)</a>
+                          <p class="ranking-chapters">18 Chapters</p>
+                      </div>
+                  </li>
+                  <li class="ranking-item">
+                      <span class="ranking-number">02</span>
+                      <div class="ranking-image">
+                          <img src="img/tải xuống1.jfif" alt="Truyện D">
+                      </div>
+                      <div class="ranking-details">
+                          <a href="#" class="ranking-title">Truyện D (Tuần)</a>
+                          <p class="ranking-chapters">12 Chapters</p>
+                      </div>
+                  </li>
+              </ul>
+              <ul class="ranking-list" id="day">
+                  <li class="ranking-item">
+                      <span class="ranking-number">01</span>
+                      <div class="ranking-image">
+                          <img src="img/tải xuống1.jfif" alt="Truyện E">
+                      </div>
+                      <div class="ranking-details">
+                          <a href="#" class="ranking-title">Truyện E (Ngày)</a>
+                          <p class="ranking-chapters">10 Chapters</p>
+                      </div>
+                  </li>
+                  <li class="ranking-item">
+                      <span class="ranking-number">02</span>
+                      <div class="ranking-image">
+                          <img src="img/tải xuống1.jfif" alt="Truyện F">
+                      </div>
+                      <div class="ranking-details">
+                          <a href="#" class="ranking-title">Truyện F (Ngày)</a>
+                          <p class="ranking-chapters">8 Chapters</p>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      
+          <script>
+              // JavaScript để quản lý chuyển tab
+              const tabs = document.querySelectorAll('.ranking-tab');
+              const lists = document.querySelectorAll('.ranking-list');
+      
+              tabs.forEach(tab => {
+                  tab.addEventListener('click', () => {
+                      // Xóa class active khỏi các tab và danh sách
+                      tabs.forEach(t => t.classList.remove('active'));
+                      lists.forEach(list => list.classList.remove('active'));
+      
+                      // Thêm class active cho tab và danh sách được chọn
+                      tab.classList.add('active');
+                      const tabId = tab.getAttribute('data-tab');
+                      document.getElementById(tabId).classList.add('active');
+                  });
+              });
+          </script>
+            
+          </div>
+          
     
     </nav>
 </body>
