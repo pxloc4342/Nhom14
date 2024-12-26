@@ -1,0 +1,49 @@
+/* Container chung */
+.container3 {
+    display: flex; /* Sử dụng flexbox để phân chia hai cột */
+    margin-top: 30px;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #303030;
+    font-family: Helvetica;
+}
+
+
+.left-section {
+    flex: 40%; 
+    padding: 10px;
+    color: #aaaaaa;
+    word-wrap: break-word; /* Ngắt dòng nếu nội dung quá dài */
+    margin-left: 80px;
+}
+
+
+.right-section {
+    flex: 60%; 
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng */
+    gap: 10px; /* Khoảng cách giữa các box */
+    padding: 20px;
+    align-items: flex-start; /* Căn từ trên xuống */
+    
+}
+
+/* Các ô chữ */
+.box {
+    padding: 7px 10px;
+    text-align: center;
+    background-color: #303030;
+    color: #555;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    border: 1px solid;
+    border-color: #555; /* Chỉ thay đổi màu viền */
+}
+
+.box:hover {
+    background-color: #555;
+    color: #303030;
+}
