@@ -20,13 +20,19 @@
 
 .view-all {
   text-decoration: none;
-  color: #007BFF;
+  color: #0d706e;
+  background-color: white;
   font-size: 16px;
   transition: color 0.3s;
+  padding: 4px;
+  border: 3px;
+  border: 1px solid;
+  border-color: #0d706e; /* Chỉ thay đổi màu viền */
 }
 
 .view-all:hover {
-  color: #0056b3;
+  color: white;
+  background-color: #0d706e;
 }
 
 .grid1 {

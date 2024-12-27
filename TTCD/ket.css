@@ -1,22 +1,22 @@
 /* Container chung */
-.container {
+.container3 {
   display: flex;
   width: 100%;
-  border: 1px solid #ccc;
+  background-color: #303030;
   box-sizing: border-box;
+  margin-top: 30px;
+  color: #666;
 }
 
 /* Phần bên trái (65%) */
 .left-section {
-  width: 40%;
-  padding: 30px; /* Nội dung lùi vào 30px */
-  background-color: #f9f9f9;
-  border-right: 1px solid #ddd;
+  width: 35%;
+  margin-left: 90px;
 }
 
 /* Phần bên phải (35%) */
 .right-section {
-  width: 60%;
+  width: 65%;
   padding: 30px; /* Nội dung lùi vào 30px */
   display: flex;
   flex-wrap: wrap; /* Cho phép xuống dòng khi hết chiều rộng */
@@ -28,14 +28,17 @@
 .box {
   padding: 10px 15px;
   text-align: center;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #303030;
+  color: #555;
   text-decoration: none;
   border-radius: 5px;
   font-size: 14px;
   transition: background-color 0.3s;
+  border: 1px solid;
+  border-color: #555; /* Chỉ thay đổi màu viền */
 }
 
 .box:hover {
-  background-color: #0056b3;
+  background-color: #555;
+  color: #303030;
 }
