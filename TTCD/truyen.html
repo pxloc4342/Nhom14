@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="truyenChu.css">
   <link rel="stylesheet" href="menu_dacap.css">
+  <link rel="stylesheet" href="./DkDn.css">
   <link rel="stylesheet" href="./ket.css">
   <link rel="stylesheet" href="truyenMoiCapNhat.css">
   <link rel="stylesheet" href="3_slide.css">
@@ -43,8 +44,8 @@
             <!-- Menu con -->
             <div class="box-submenu">
               <ul>
-                <li><a href="#">Đăng nhập</a></li>
-                <li><a href="#">Đăng ký</a></li>
+                <li><a href="#" class="dn">Đăng nhập</a></li>
+                <li><a href="#" class="dk">Đăng ký</a></li>
               </ul>
             </div>
           </li>
@@ -228,47 +229,203 @@
         </div>
         <button class="arrow-right"><i class="fas fa-arrow-right"></i></button>
     </div>
-  </nav>
-<!--java truyen hot-->
+    <!--java truyen hot-->
   <script>
-     // JavaScript
-     const slideShow = document.querySelector('.list-images');
-        const arrowLeft = document.querySelector('.arrow-left');
-        const arrowRight = document.querySelector('.arrow-right');
-        const images = document.querySelectorAll('.images');
+    // JavaScript
+    const slideShow = document.querySelector('.list-images');
+       const arrowLeft = document.querySelector('.arrow-left');
+       const arrowRight = document.querySelector('.arrow-right');
+       const images = document.querySelectorAll('.images');
 
-        let currentIndex = 0;
-        const imageWidth = document.querySelector('.images').offsetWidth + 20; // Kích thước ảnh + khoảng cách
-        const totalImages = images.length;
+       let currentIndex = 0;
+       const imageWidth = document.querySelector('.images').offsetWidth + 20; // Kích thước ảnh + khoảng cách
+       const totalImages = images.length;
 
-        // Hàm cập nhật vị trí
-        function updatePosition() {
-            slideShow.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+       // Hàm cập nhật vị trí
+       function updatePosition() {
+           slideShow.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+       }
+
+       // Hàm cuộn sang phải
+       arrowRight.addEventListener('click', () => {
+           currentIndex++;
+           if (currentIndex > 6) {
+               currentIndex = 0; // Quay lại ảnh đầu
+           }
+           updatePosition();
+       });
+
+       // Hàm cuộn sang trái
+       arrowLeft.addEventListener('click', () => {
+           currentIndex--;
+           if (currentIndex < 0) {
+               currentIndex = 7; // Quay lại "truyện thứ 8"
+           }
+           updatePosition();
+       });
+
+       // Tự động cuộn mỗi 4 giây
+       setInterval(() => {
+           arrowRight.click();
+       }, 4000);
+ </script>
+  </nav>
+
+  <!--Đăng ký / Đăng nhập-->
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+
+    <div class="modal__body">
+        <!-- Đăng ký -->
+      <div class="auth-form">
+        <div class="auth-form__container">
+          <div class="auth-form__header">
+            <h3 class="authu-form__heading">Đăng ký</h3>
+            <span class="auth-form__switch-btn">Đăng nhập</span>
+          </div>
+       <div class="auth-form__forn">
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Name.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Xác nhận mật khẩu.">
+         </div>
+       </div>
+       <!--cmt-->
+       <div class="auth-form__aside">
+         <p class="auth-form__policy-text">
+           Bằng việc đăng ký, bạn đã đồng ý với "Truyện VN" về <br>
+           <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+           <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
+         </p>
+        </div>
+         <!--Nút-->
+         <div class="auth-form__controls">
+          <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+          <button class="btn btn--ptimary">ĐĂNG KÝ</button>
+        </div>
+
+         </div>
+         <!--đk bằng fb & gg-->
+          <div class="auth-form__socilas">
+             <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
+                <i class="auth-form__socilas-icon fab fa-facebook-f"></i>
+                 Kết nối với Facebook
+             </a>
+             <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AeZLP99FebRJ5pW6PrrUJsxY7SEFZLrB_BBW-k5pHFNuGkGk2tqeq8Zh42Rm9QJuGHKyGigJHg-wNg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2147375664%3A1735290431472750&ddm=1" class="auth-form__socilas--google btn btn--size-s btn--with-icon">
+                <i class="auth-form__socilas-icon fab fa-google"></i>
+                 Kết nối với Google
+           </a>
+          </div>
+        </div>
+      </div>
+      
+      <script>// Lấy các phần tử cần thiết
+        const modal = document.getElementById('modal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const openModalBtn = document.querySelector('.dk');
+        const closeModalBtn = document.querySelector('.auth-form__controls-back');
+        
+        // Hiển thị modal khi bấm nút "Đăng ký"
+        openModalBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+            modal.classList.add('active');
+        });
+        
+        // Ẩn modal khi bấm vào overlay
+        modalOverlay.addEventListener('click', function () {
+            modal.classList.remove('active');
+        });
+        
+        // Ẩn modal khi bấm nút "TRỞ LẠI"
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', function (event) {
+                event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+                modal.classList.remove('active');
+            });
+        } else {
+            console.error('Nút "TRỞ LẠI" không tìm thấy!');
         }
+        
+      </script>
 
-        // Hàm cuộn sang phải
-        arrowRight.addEventListener('click', () => {
-            currentIndex++;
-            if (currentIndex > 6) {
-                currentIndex = 0; // Quay lại ảnh đầu
-            }
-            updatePosition();
-        });
-
-        // Hàm cuộn sang trái
-        arrowLeft.addEventListener('click', () => {
-            currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = 7; // Quay lại "truyện thứ 8"
-            }
-            updatePosition();
-        });
-
-        // Tự động cuộn mỗi 4 giây
-        setInterval(() => {
-            arrowRight.click();
-        }, 4000);
-  </script>
+    </div>
+    <div class="modal1" id="modal1">
+      <div class="modal__overlay" id="modalOverlay"></div>
+  
+      <div class="modal__body1">
+          <!-- Đăng ký -->
+        <div class="auth-form">
+          <div class="auth-form__container1">
+            <div class="auth-form__header1">
+              <h3 class="authu-form__heading1">Đăng nhập </h3>
+              <span class="auth-form__switch-btn1">Đăng ký</span>
+            </div>
+         <div class="auth-form__forn">
+           <div class="auth-from__group">
+             <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
+           </div>
+           <div class="auth-from__group">
+             <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
+           </div>
+         </div>
+         <!--cmt-->
+         <div class="auth-form__aside">
+           <p class="auth-form__policy-text">
+             Bằng việc đăng nhập, bạn đã đồng ý với "Truyện VN" về <br>
+             <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+             <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
+           </p>
+          </div>
+           <!--Nút-->
+           <div class="auth-form__controls">
+            <button class="btn auth-form__controls-back" id="backLogin">TRỞ LẠI</button>
+            <button class="btn btn--primary">ĐĂNG NHẬP</button>
+          </div>
+  
+           </div>
+           <!--đk bằng fb & gg-->
+            <div class="auth-form__socilas">
+               <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
+                  <i class="auth-form__socilas-icon fab fa-facebook-f"></i>
+                   Kết nối với Facebook
+               </a>
+               <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AeZLP99FebRJ5pW6PrrUJsxY7SEFZLrB_BBW-k5pHFNuGkGk2tqeq8Zh42Rm9QJuGHKyGigJHg-wNg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2147375664%3A1735290431472750&ddm=1" class="auth-form__socilas--google btn btn--size-s btn--with-icon">
+                  <i class="auth-form__socilas-icon fab fa-google"></i>
+                   Kết nối với Google
+             </a>
+            </div>
+          </div>
+        </div>
+        <script>// Lấy các phần tử cần thiết
+          const loginModal = document.getElementById("modal1");
+          const loginOverlay = document.getElementById("modal1Overlay");
+          const loginButton = document.querySelector(".dn");
+          const backLoginButton = document.getElementById("backLogin");
+          
+          // Hiển thị modal đăng nhập
+          loginButton.addEventListener("click", function (event) {
+              event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+              loginModal.style.display = "block";
+          });
+          
+          // Ẩn modal khi bấm "TRỞ LẠI" hoặc overlay
+          backLoginButton.addEventListener("click", function () {
+              loginModal.style.display = "none";
+          });
+          
+          loginOverlay.addEventListener("click", function () {
+              loginModal.style.display = "none";
+          });
+          
+        </script>
+    </div>
 
     <nav class="web-truyen">
         <div class="container">

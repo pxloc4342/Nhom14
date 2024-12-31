@@ -117,13 +117,17 @@
     border-radius: 50%;
 }
 /*Tài khoản*/
-.modal{
+.modal {
+    display: none; /* Ẩn modal mặc định */
     position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
 }
 .modal__overlay{
     position: absolute;
@@ -141,6 +145,10 @@
 }
 /*Xác thực*/
 
+
+.modal.active {
+    display: flex; /* Hiển thị modal khi thêm class active */
+}
 .auth-form__container{
     padding: 0 32px;
 }
@@ -165,6 +173,7 @@
    font-weight: 400;
    color: #0d6f6e;
    cursor: pointer;
+   font-size: 15px;
 }
 
 .auth-form__input{
@@ -198,6 +207,33 @@
 .auth-form__controls{
     display: flex;
     justify-content: flex-end;
+}
+/*Đăng nhập*/
+.modal1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal__body1 {
+    position: relative;
+    width: 500px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.auth-form__header1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
 }
 /*fb, gg*/
 .auth-form__socilas{
