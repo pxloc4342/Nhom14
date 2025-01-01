@@ -1,0 +1,206 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .story-container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.top-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.story-image {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.story-details {
+    display: flex;
+    gap: 20px;
+}
+
+.details-left, .details-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.story-content, .story-intro, .chapter-list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+/*Bình luận*/
+
+.comment-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.comment-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-input {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.comment-submit {
+    align-self: flex-end;
+    padding: 8px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-submit:hover {
+    background-color: #0056b3;
+}
+
+.comment-list .comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.comment-list .comment strong {
+    color: #007bff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <!-- Phần trên cùng chứa ảnh và chữ -->
+        <div class="top-section">
+            <img src="img/sample.jpg" alt="Ảnh truyện" class="story-image" />
+            <div class="story-details">
+                <div class="details-left">
+                    <p>Hàng chữ 1</p>
+                    <p>Hàng chữ 2</p>
+                    <p>Hàng chữ 3</p>
+                    <p>Hàng chữ 4</p>
+                    <p>Hàng chữ 5</p>
+                </div>
+                <div class="details-right">
+                    <p>Hàng chữ 1 phải</p>
+                    <p>Hàng chữ 2 phải</p>
+                    <p>Hàng chữ 3 phải</p>
+                    <p>Hàng chữ 4 phải</p>
+                    <p>Hàng chữ 5 phải</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Nội dung truyện -->
+        <div class="story-content">
+            <h3>Nội dung truyện:</h3>
+            <p>Đây là nội dung chính của truyện...</p>
+        </div>
+    
+        <!-- Giới thiệu nội dung truyện -->
+        <div class="story-intro">
+            <h3>Giới thiệu:</h3>
+            <p>Đây là phần giới thiệu về nội dung truyện...</p>
+        </div>
+    
+        <!-- Danh sách chương -->
+        <div class="chapter-list">
+            <h3>Danh sách chương:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Số chương</th>
+                        <th>Ngày cập nhật</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chương 1</td>
+                        <td>2024-01-01</td>
+                    </tr>
+                    <tr>
+                        <td>Chương 2</td>
+                        <td>2024-01-02</td>
+                    </tr>
+                    <tr>
+                        <td>Chương 3</td>
+                        <td>2024-01-03</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="comment-section">
+        <h3>Bình luận:</h3>
+        <!-- Form nhập bình luận -->
+        <div class="comment-form">
+            <textarea placeholder="Viết bình luận của bạn..." class="comment-input"></textarea>
+            <button class="btn comment-submit">Gửi bình luận</button>
+        </div>
+    
+        <!-- Danh sách bình luận -->
+        <div class="comment-list">
+            <div class="comment">
+                <p><strong>Người dùng 1:</strong> Nội dung bình luận 1...</p>
+            </div>
+            <div class="comment">
+                <p><strong>Người dùng 2:</strong> Nội dung bình luận 2...</p>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
