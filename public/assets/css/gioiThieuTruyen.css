@@ -23,7 +23,7 @@
 
 .story-details {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .details-left, .details-right {
@@ -57,7 +57,7 @@ table th {
 /*Hover*/
 .details-left_theodoi {
     color: white;
-    background-color: #fc5274;
+    background-color: #ff3860;
     font-size: 16px;
     transition: color 0.3s;
     padding: 10px;
@@ -68,12 +68,12 @@ table th {
   
   .details-left_theodoi:hover {
     color: white;
-    background-color: #ff3860;
+    background-color: #fc6482;
   }
 
   .details-left_doc {
     color: white;
-    background-color: #fc5274;
+    background-color: #8ad239;
     font-size: 16px;
     transition: color 0.3s;
     padding: 10px;
@@ -85,7 +85,7 @@ table th {
   
   .details-left_doc:hover {
     color: white;
-    background-color: #ff3860;
+    background-color: #8abd4f;
   }  
 /*Bình luận*/
 
