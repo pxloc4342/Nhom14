@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/public/assets/css/ket.css">
   <link rel="stylesheet" href="/public/assets/css/menu_dacap.css">
   <link rel="stylesheet" href="/public/assets/css/truyenChu.css">
+  <link rel="stylesheet" href="/public/assets/css/cheDoToi.css">
   <link rel="stylesheet" href="/public/assets/css/truyenMoiCapNhat.css">
   <link rel="stylesheet" href="/public/assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
 </head>
@@ -159,11 +160,27 @@
       </li>
             
       <li class="header__navbar-item"> 
-        <a href="" class="header__navbar-item-link ">
-          <i class="f1 far fa-lightbulb" style="color: #ffcd18;"></i>
+        <a href="#" class="header__navbar-item-link">
+          <i class="f1 far fa-lightbulb" id="darkModeToggle" style="color: #ffcd18;"></i>
         </a>
       </li> 
       
+      <script>
+        // JavaScript cho Dark Mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Xử lý sự kiện click
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Đổi icon màu để phù hợp chế độ
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.style.color = '#ffffff';
+            } else {
+                darkModeToggle.style.color = '#ffcd18';
+            }
+        });
+      </script>       
     </ul>
     </nav>
     </div>
@@ -476,38 +493,38 @@
         để tiến hành gỡ bỏ nội dung vi phạm một cách kịp thời.</p>
       </div>
       <div class="right-section">
-        <a href="#" class="box">Truyện Hot</a>
-        <a href="#" class="box">Truyện Truyền Thuyết</a>
-        <a href="#" class="box">Truyện Ngụ Ngôn</a>
-        <a href="#" class="box">Truyện lịch sử Việt Nam</a>
-        <a href="#cotich" class="box">Truyện cổ tích Việt Nam</a>
-        <a href="#dangian" class="box">Truyện dân gian</a>
-        <a href="#ngungon" class="box">Truyện ngụ ngôn Việt Nam</a>
-        <a href="#truyenthuyet" class="box">Truyện truyền thuyết</a>
-        <a href="#lichsu" class="box">Truyện chữ</a>
-        <a href="#coxua" class="box">Truyện cổ xưa</a>
-        <a href="#thanthoai" class="box">Truyện thần thoại Việt Nam</a>
-        <a href="#thieunhi" class="box">Truyện thiếu nhi Việt Nam</a>
-        <a href="#ngan" class="box">Truyện ngắn Việt Nam</a>
-        <a href="#ma" class="box">Truyện ma Việt Nam</a>
-        <a href="#kybi" class="box">Truyện kỳ bí Việt Nam</a>
-        <a href="#tieulam" class="box">Truyện tiếu lâm Việt Nam</a>
-        <a href="#quehuong" class="box">Truyện quê hương</a>
-        <a href="#tinhque" class="box">Chuyện tình quê</a>
-        <a href="#hienDai" class="box">Truyện hiện đại Việt Nam</a>
-        <a href="#bikich" class="box">Truyện bi kịch</a>
-        <a href="#cachmang" class="box">Truyện cách mạng</a>
-        <a href="#xaxu" class="box">Chuyện người Việt xa xứ</a>
-        <a href="#camhung" class="box">Truyện cảm hứng lịch sử</a>
-        <a href="#giadinh" class="box">Truyện gia đình Việt Nam</a>
-        <a href="#truyencuoi" class="box">Truyện cười Việt Nam</a>
-        <a href="#thieunien" class="box">Truyện thiếu niên</a>
-        <a href="#locthanh" class="box">Truyện lộc thành</a>
-        <a href="#truyenthantien" class="box">Truyện thần tiên</a>
-        <a href="#chuyendoidat" class="box">Chuyện đời thật</a>
-        <a href="#ngonluan" class="box">Truyện ngôn luận</a>
-        <a href="#kichban" class="box">Kịch bản dân gian</a>
-        <a href="#vanhocdanian" class="box">Văn học dân gian</a>        
-      </div>
+        <a href="./theTruyen.html" class="box">Truyện Hot</a>
+        <a href="./theTruyen.html" class="box">Truyện Truyền Thuyết</a>
+        <a href="./theTruyen.html" class="box">Truyện Ngụ Ngôn</a>
+        <a href="./theTruyen.html" class="box">Truyện lịch sử Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện cổ tích Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện dân gian</a>
+        <a href="./theTruyen.html" class="box">Truyện ngụ ngôn Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện truyền thuyết</a>
+        <a href="./theTruyen.html" class="box">Truyện chữ</a>
+        <a href="./theTruyen.html" class="box">Truyện cổ xưa</a>
+        <a href="./theTruyen.html" class="box">Truyện thần thoại Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện thiếu nhi Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện ngắn Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện ma Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện kỳ bí Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện tiếu lâm Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện quê hương</a>
+        <a href="./theTruyen.html" class="box">Chuyện tình quê</a>
+        <a href="./theTruyen.html" class="box">Truyện hiện đại Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện bi kịch</a>
+        <a href="./theTruyen.html" class="box">Truyện cách mạng</a>
+        <a href="./theTruyen.html" class="box">Chuyện người Việt xa xứ</a>
+        <a href="./theTruyen.html" class="box">Truyện cảm hứng lịch sử</a>
+        <a href="./theTruyen.html" class="box">Truyện gia đình Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện cười Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện thiếu niên</a>
+        <a href="./theTruyen.html" class="box">Truyện lộc thành</a>
+        <a href="./theTruyen.html" class="box">Truyện thần tiên</a>
+        <a href="./theTruyen.html" class="box">Chuyện đời thật</a>
+        <a href="./theTruyen.html" class="box">Truyện ngôn luận</a>
+        <a href="./theTruyen.html" class="box">Kịch bản dân gian</a>
+        <a href="./theTruyen.html" class="box">Văn học dân gian</a>        
+    </div>
 </body>
 </html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/public/assets/css/ket.css">
   <link rel="stylesheet" href="/public/assets/css/menu_dacap.css">
   <link rel="stylesheet" href="/public/assets/css/truyenChu.css">
+  <link rel="stylesheet" href="/public/assets/css/cheDoToi.css">
   <link rel="stylesheet" href="/public/assets/css/truyenMoiCapNhat.css">
   <link rel="stylesheet" href="/public/assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
 </head>
@@ -159,11 +160,27 @@
       </li>
             
       <li class="header__navbar-item"> 
-        <a href="" class="header__navbar-item-link ">
-          <i class="f1 far fa-lightbulb" style="color: #ffcd18;"></i>
+        <a href="#" class="header__navbar-item-link">
+          <i class="f1 far fa-lightbulb" id="darkModeToggle" style="color: #ffcd18;"></i>
         </a>
       </li> 
       
+      <script>
+        // JavaScript cho Dark Mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Xử lý sự kiện click
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Đổi icon màu để phù hợp chế độ
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.style.color = '#ffffff';
+            } else {
+                darkModeToggle.style.color = '#ffcd18';
+            }
+        });
+      </script>      
     </ul>
     </nav>
     </div>

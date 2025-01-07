@@ -1,206 +1,577 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .story-container {
-    width: 80%;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-}
-
-.top-section {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.story-image {
-    width: 200px;
-    height: 260px;
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.story-details {
-    display: flex;
-    gap: 20px;
-}
-
-.details-left, .details-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.story-content, .story-intro, .chapter-list {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-}
-
-table th {
-    background-color: #f4f4f4;
-}
-
-/*Bình luận*/
-
-.comment-section {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.comment-section h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.comment-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.comment-input {
-    width: 100%;
-    height: 80px;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-}
-
-.comment-submit {
-    align-self: flex-end;
-    padding: 8px 20px;
-    font-size: 14px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.comment-submit:hover {
-    background-color: #0056b3;
-}
-
-.comment-list .comment {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.comment-list .comment strong {
-    color: #007bff;
-}
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/assets/css/main.css">
+  <link rel="stylesheet" href="/public/assets/css/3_slide.css">
+  <link rel="stylesheet" href="/public/assets/css/base.css">
+  <link rel="stylesheet" href="/public/assets/css/DkDn.css">
+  <link rel="stylesheet" href="/public/assets/css/ket.css">
+  <link rel="stylesheet" href="/public/assets/css/menu_dacap.css">
+  <link rel="stylesheet" href="/public/assets/css/truyenChu.css">
+  <link rel="stylesheet" href="/public/assets/css/noiDungTruyen.css">
+  <link rel="stylesheet" href="/public/assets/css/truyenMoiCapNhat.css">
+  <link rel="stylesheet" href="/public/assets/css/cheDoToi.css">
+  <link rel="stylesheet" href="/public/assets/js/cheDoToi.js">
+  <link rel="stylesheet" href="/public/assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
 </head>
 <body>
-    <div class="story-container">
-        <!-- Phần trên cùng chứa ảnh và chữ -->
-        <div class="top-section">
-            <img src="img/sample.jpg" alt="Ảnh truyện" class="story-image" />
-            <div class="story-details">
-                <div class="details-left">
-                    <p>Hàng chữ 1</p>
-                    <p>Hàng chữ 2</p>
-                    <p>Hàng chữ 3</p>
-                    <p>Hàng chữ 4</p>
-                    <p>Hàng chữ 5</p>
-                </div>
-                <div class="details-right">
-                    <p>Hàng chữ 1 phải</p>
-                    <p>Hàng chữ 2 phải</p>
-                    <p>Hàng chữ 3 phải</p>
-                    <p>Hàng chữ 4 phải</p>
-                    <p>Hàng chữ 5 phải</p>
-                </div>
+  <div class="app">
+      <header class="header">      
+      <nav class="header__navbar1">
+        <ul class="header__navbar-list1">
+          <div class="header-white-search">
+            <div class="header__logo">
+              <div class="header__logo-img">
+                <a href="./truyen.html" class="header__logo-img-book"><i class="fas fa-book-open" style="color: #ffffff;"></i></a>
+                <a href="./truyen.html"><img src="/public/assets/img/8.jpg" alt="fđ" width="160px" header="220px"> </a>
+              </div>
             </div>
+          </div>
+        </ul>
+        <!--Tìm kiếm-->
+        <ul class="header__navbar-list1">
+          <div class="form">
+          <form action="" id="search-box">
+            <input type="text" id="search-text" placeholder="Tìm truyện...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+          </form>
+          </div>
+        </ul>
+        <ul class="header_navbar-list1">
+          <li class="header_navbar-item1">
+            <a href="#" class="tk header_navbar-item2" style="color: #fff;">
+              <i class="fas fa-user"></i> Tài khoản <i class="fas fa-sort-down"></i>
+            </a>
+            <!-- Menu con -->
+            <div class="box-submenu">
+              <ul>
+                <li><a href="#" class="dn">Đăng nhập</a></li>
+                <li><a href="#" class="dk">Đăng ký</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!--Phương thức-->
+      
+       <!--Tài khoản-->
+
+      </nav>   
+    </header>
+    
+      <!--Dòng 2-->  
+      <nav class="header__navbar">
+      <ul class="header__navbar-list">
+        <li class="header__navbar-item"> 
+          <a href="./truyen.html" class="header__navbar-item-link1">
+            <i class="fas fa-home" style="color: #0d6f6e;" ></i>
+          </a> 
+        </li> 
+        <li class="header__navbar-item">
+          <a href="#" class="header__navbar-item-link">
+            <i class="f1 fas fa-list-ul"></i> Thể loại <i class="fas fa-sort-down"></i>
+          </a>
+          <!-- Menu con -->
+          <div class="dropdown-menu">
+            <ul class="dropdown-list">
+              <li><a href="./theTruyen.html">Truyện cổ tích</a></li>
+              <li><a href="./theTruyen.html">Truyện ngụ ngôn</a></li>
+              <li><a href="./theTruyen.html">Truyện cười</a></li>
+              <li><a href="./theTruyen.html">Tiểu thuyết</a></li>
+              <li><a href="./theTruyen.html">Truyện ngắn</a></li>
+              <li><a href="./theTruyen.html">Truyện truyền thuyết</a></li>
+              <li><a href="./theTruyen.html">Truyện thơ</a></li>
+              <li><a href="./theTruyen.html">Truyện tâm lý xã hội</a></li>
+              <li><a href="./theTruyen.html">Truyện kinh dị - Giả tưởng</a></li>
+              <li><a href="./theTruyen.html">Truyện ký sự - Tự truyện</a></li>
+              <li><a href="./theTruyen.html">Truyện dành cho thiếu nhi</a></li>
+              <li><a href="./theTruyen.html">Truyện khoa học - Giáo dục</a></li>
+            </ul>
+          </div>
+        </li>
+        
+ 
+        <li class="header__navbar-item">
+          <a href="#" class="header__navbar-item-link">
+            <i class="f1 fas fa-list-ul"></i> Xếp hạng <i class="fas fa-sort-down"></i>
+          </a>
+          <!-- Menu con -->
+          <div class="dropdown-menu">
+            <ul class="dropdown-list">
+              <!-- Mục con cấp 1 -->
+              <li class="dropdown-item">
+                <a href="#">Theo Lượt Đọc</a>
+                <!-- Menu con cấp 2 -->
+                <ul class="sub-dropdown">
+                  <li><a href="./theTruyen.html">Trong tuần</a></li>
+                  <li><a href="./theTruyen.html">Trong tháng</a></li>
+                  <li><a href="./theTruyen.html">Mọi thời đại</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Theo Đánh Giá</a>
+                <ul class="sub-dropdown">
+                  <li><a href="./theTruyen.html">Đánh giá cao nhất</a></li>
+                  <li><a href="./theTruyen.html">Được yêu thích</a></li>
+                  <li><a href="./theTruyen.html">Nhiều bình luận nhất</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-item">
+                <a href="#">Theo Thể Loại</a>
+                <ul class="sub-dropdown">
+                  <li><a href="./theTruyen.html">Cổ tích</a></li>
+                  <li><a href="./theTruyen.html">Truyện ngắn</a></li>
+                  <li><a href="./theTruyen.html">Tiểu thuyết</a></li>
+                  <li><a href="./theTruyen.html">Kinh dị</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+        
+        <li class="header__navbar-item"> 
+          <a href="" class="header__navbar-item-link ">
+            <i class="f1 fas fa-font"></i> Truyện chữ
+          </a>
+        </li>
+           
+        <li class="header__navbar-item">
+          <a href="#" class="header__navbar-item-link">
+            <i class="f1 fas fa-list-ul"></i> Phân loại theo chương <i class="fas fa-sort-down"></i>
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown">
+            <li>
+              <a href="./theTruyen.html">Full chương</a>
+            </li>
+            <li>
+              <a href="./theTruyen.html">Trên 100 chương</a>
+            </li>
+            <li>
+              <a href="./theTruyen.html">Dưới 50 chương</a>
+            </li>
+            <li>
+              <a href="./theTruyen.html">Đang ra chương</a>
+            </li>
+            <li>
+              <a href="./theTruyen.html">Chương mới nhất</a>
+            </li>
+          </ul>
+        </li>
+               
+          <li class="header__navbar-item"> 
+            <a href="#" class="header__navbar-item-link">
+              <i class="f1 far fa-lightbulb" id="darkModeToggle" style="color: #ffcd18;"></i>
+            </a>
+          </li> 
+          
+          <script>
+            // JavaScript cho Dark Mode
+            const darkModeToggle = document.getElementById('darkModeToggle');
+
+            // Xử lý sự kiện click
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                
+                // Đổi icon màu để phù hợp chế độ
+                if (document.body.classList.contains('dark-mode')) {
+                    darkModeToggle.style.color = '#ffffff';
+                } else {
+                    darkModeToggle.style.color = '#ffcd18';
+                }
+            });
+          </script>     
+      </ul>
+      </nav>
+  </div>
+
+  <!--Đăng ký / Đăng nhập-->
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+
+    <div class="modal__body">
+        <!-- Đăng ký -->
+      <div class="auth-form">
+        <div class="auth-form__container">
+          <div class="auth-form__header">
+            <h3 class="authu-form__heading">Đăng ký</h3>
+            <span class="auth-form__switch-btn">Đăng nhập</span>
+          </div>
+       <div class="auth-form__forn">
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Name.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Xác nhận mật khẩu.">
+         </div>
+       </div>
+       <!--cmt-->
+       <div class="auth-form__aside">
+         <p class="auth-form__policy-text">
+           Bằng việc đăng ký, bạn đã đồng ý với "Truyện VN" về <br>
+           <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+           <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
+         </p>
+        </div>
+         <!--Nút-->
+         <div class="auth-form__controls">
+          <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+          <button class="btn btn--ptimary">ĐĂNG KÝ</button>
+        </div>
+
+         </div>
+         <!--đk bằng fb & gg-->
+          <div class="auth-form__socilas">
+             <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
+                <i class="auth-form__socilas-icon fab fa-facebook-f"></i>
+                 Kết nối với Facebook
+             </a>
+             <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AeZLP99FebRJ5pW6PrrUJsxY7SEFZLrB_BBW-k5pHFNuGkGk2tqeq8Zh42Rm9QJuGHKyGigJHg-wNg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2147375664%3A1735290431472750&ddm=1" class="auth-form__socilas--google btn btn--size-s btn--with-icon">
+                <i class="auth-form__socilas-icon fab fa-google"></i>
+                 Kết nối với Google
+           </a>
+          </div>
+        </div>
+      </div>
+      
+      <script>// Lấy các phần tử cần thiết
+        const modal = document.getElementById('modal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const openModalBtn = document.querySelector('.dk');
+        const closeModalBtn = document.querySelector('.auth-form__controls-back');
+        
+        // Hiển thị modal khi bấm nút "Đăng ký"
+        openModalBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+            modal.classList.add('active');
+        });
+        
+        // Ẩn modal khi bấm vào overlay
+        modalOverlay.addEventListener('click', function () {
+            modal.classList.remove('active');
+        });
+        
+        // Ẩn modal khi bấm nút "TRỞ LẠI"
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', function (event) {
+                event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+                modal.classList.remove('active');
+            });
+        } else {
+            console.error('Nút "TRỞ LẠI" không tìm thấy!');
+        }
+        
+      </script>
+
+    </div>
+    <div class="modal1" id="modal1">
+      <div class="modal__overlay" id="modalOverlay"></div>
+  
+      <div class="modal__body1">
+          <!-- Đăng ký -->
+        <div class="auth-form">
+          <div class="auth-form__container1">
+            <div class="auth-form__header1">
+              <h3 class="authu-form__heading1">Đăng nhập </h3>
+              <span class="auth-form__switch-btn1">Đăng ký</span>
+            </div>
+         <div class="auth-form__forn">
+           <div class="auth-from__group">
+             <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
+           </div>
+           <div class="auth-from__group">
+             <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
+           </div>
+         </div>
+         <!--cmt-->
+         <div class="auth-form__aside">
+           <p class="auth-form__policy-text">
+             Bằng việc đăng nhập, bạn đã đồng ý với "Truyện VN" về <br>
+             <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+             <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
+           </p>
+          </div>
+           <!--Nút-->
+           <div class="auth-form__controls">
+            <button class="btn auth-form__controls-back" id="backLogin">TRỞ LẠI</button>
+            <button class="btn btn--primary">ĐĂNG NHẬP</button>
+          </div>
+           </div>
+         
+           <!--đk bằng fb & gg-->
+            <div class="auth-form__socilas">
+               <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
+                  <i class="auth-form__socilas-icon fab fa-facebook-f"></i>
+                   Kết nối với Facebook
+               </a>
+               <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AeZLP99FebRJ5pW6PrrUJsxY7SEFZLrB_BBW-k5pHFNuGkGk2tqeq8Zh42Rm9QJuGHKyGigJHg-wNg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2147375664%3A1735290431472750&ddm=1" class="auth-form__socilas--google btn btn--size-s btn--with-icon">
+                  <i class="auth-form__socilas-icon fab fa-google"></i>
+                   Kết nối với Google
+             </a>
+            </div>
+          </div>
+        </div>
+        <script>// Lấy các phần tử cần thiết
+          const loginModal = document.getElementById("modal1");
+          const loginOverlay = document.getElementById("modal1Overlay");
+          const loginButton = document.querySelector(".dn");
+          const backLoginButton = document.getElementById("backLogin");
+          
+          // Hiển thị modal đăng nhập
+          loginButton.addEventListener("click", function (event) {
+              event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+              loginModal.style.display = "block";
+          });
+          
+          // Ẩn modal khi bấm "TRỞ LẠI" hoặc overlay
+          backLoginButton.addEventListener("click", function () {
+              loginModal.style.display = "none";
+          });
+          
+          loginOverlay.addEventListener("click", function () {
+              loginModal.style.display = "none";
+          });
+          
+        </script>
+      </div>
+      
+      <div class="title">
+      <h1>Chí Phèo</h1>
+      <p>Chương 1</p>
+      <div class="navigation">
+        <!-- Chương trước -->
+        <div class="nav-item">
+            <a href="#" class="nav-link">Chương trước</a>
         </div>
     
-        <!-- Nội dung truyện -->
-        <div class="story-content">
-            <h3>Nội dung truyện:</h3>
-            <p>Đây là nội dung chính của truyện...</p>
+        <!-- Danh sách -->
+        <div class="nav-item">
+            <a href="#" class="nav-link">Danh sách</a>
+            <ul class="dropdown">
+                <li><a href="./noiDungTruyen.html">Chương 1</a></li>
+                <li><a href="/views/use/truyenChiPheo/chap2.html">Chương 2</a></li>
+                <li><a href="/views/use/truyenChiPheo/chap3.html">Chương 3</a></li>
+            </ul>
         </div>
     
-        <!-- Giới thiệu nội dung truyện -->
-        <div class="story-intro">
-            <h3>Giới thiệu:</h3>
-            <p>Đây là phần giới thiệu về nội dung truyện...</p>
-        </div>
-    
-        <!-- Danh sách chương -->
-        <div class="chapter-list">
-            <h3>Danh sách chương:</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Số chương</th>
-                        <th>Ngày cập nhật</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Chương 1</td>
-                        <td>2024-01-01</td>
-                    </tr>
-                    <tr>
-                        <td>Chương 2</td>
-                        <td>2024-01-02</td>
-                    </tr>
-                    <tr>
-                        <td>Chương 3</td>
-                        <td>2024-01-03</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Chương sau -->
+        <div class="nav-item">
+            <a href="/views/use/truyenChiPheo/chap2.html" class="nav-link">Chương sau</a>
         </div>
     </div>
-    <div class="comment-section">
-        <h3>Bình luận:</h3>
-        <!-- Form nhập bình luận -->
-        <div class="comment-form">
-            <textarea placeholder="Viết bình luận của bạn..." class="comment-input"></textarea>
-            <button class="btn comment-submit">Gửi bình luận</button>
-        </div>
     
-        <!-- Danh sách bình luận -->
-        <div class="comment-list">
-            <div class="comment">
-                <p><strong>Người dùng 1:</strong> Nội dung bình luận 1...</p>
-            </div>
-            <div class="comment">
-                <p><strong>Người dùng 2:</strong> Nội dung bình luận 2...</p>
-            </div>
-        </div>
+      <p> ¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸</p>
     </div>
+    <div class="story_content">
+        <p>Hắn vừa đi vừa chửi. Bao giờ cũng thế, cứ rượu xong là hắn chửi. Bắt đầu chửi trời, có hề gì? 
+            Trời có của riêng nhà nào? Rồi hắn chửi đời. Thế cũng chẳng sao: Đời là tất cả nhưng cũng chẳng
+            là ai. Tức mình hắn chửi ngay tất cả làng Vũ Đại. Nhưng cả làng Vũ Đại ai cũng nhủ: “Chắc nó 
+            trừ mình ra!”. Không ai lên tiếng cả. Tức thật! Ồ thế này thì tức thật! Tức chết đi được mất!
+            Đã thế, hắn phải chửi cha đứa nào không chửi nhau với hắn. Nhưng cũng không ai ra điều. Mẹ kiếp!
+            Thế thì có phí rượu không? Thế thì có khổ hắn không? Không biết đứa chết mẹ nào đẻ ra thân hắn
+            cho hắn khổ đến nông nỗi này! A ha! Phải đấy hắn cứ thế mà chửi, hắn chửi đứa chết mẹ nào đẻ ra 
+            thân hắn, đẻ ra cái thằng Chí Phèo? Mà có trời biết! Hắn không biết, cả làng Vũ Đại cũng không 
+            ai biết. <br>
+            <br><br>
+            Một anh đi thả ống lươn, một buổi sáng tinh sương đã thấy hắn trần truồng và xám ngắt trong cái 
+            váy đụp để bên một lò gạch bỏ không, anh ta rước lấy và đem cho một người đàn bà góa mù. Người 
+            đàn bà góa mù này bán hắn cho một bác phó cối không con và khi bác phó cối này chết thì hắn bơ 
+            vơ, hết đi ở cho nhà này lại đi ở cho nhà nọ. Năm hai mươi tuổi, hắn làm canh điền cho ông lý 
+            Kiến, bây giờ cụ bá Kiến, ăn tiên chỉ làng. Hình như, có mấy lần bà ba nhà ông lý, trẻ lắm mà 
+            lại hay ốm lửng, bắt hắn bóp chân, hay xoa bụng, đấm lưng gì đấy. Người ta bảo ông lý ra đình thì
+            hách dịch, cả làng phải sợ, mà về nhà phải sợ cái bà ba còn trẻ này. Người bà ấy phốp pháp, má bà
+            ấy hây hây, mà ông lý thì hay đau lưng lắm; người có bệnh đau lưng thì hay sợ vợ mà chúa đời là 
+            khoẻ ghen. Có người bảo ông lý ghen anh canh điền khoẻ mạnh mà sợ bà ba không dám nói. Có người
+            thì bảo anh canh điền ấy được bà ba quyền thu quyền bổ trong nhà tin cẩn nên lấy trộm tiền trộm
+            thóc nhiều. Mỗi người nói một cách. Chẳng biết đâu mà lần. Chỉ biết một hôm Chí bị giải huyện 
+            rồi nghe đâu phải đi tù. Không biết tù mấy năm, nhưng hắn đi biệt tăm bảy, tám năm, rồi một hôm,
+            hắn lại lù lù ở đâu lần về. Hắn về lần này trông khác hẳn, mới đầu chẳng ai biết hắn là ai. 
+            Trông đặc như thằng sắng cá! Cái đầu thì trọc lốc, cái răng cạo trắng hớn, cái mặt thì đen mà
+            rất cơng cơng, hai mắt gườm gườm trông gớm chết! Hắn mặc quần áo nái đen với cái áo tây vàng.
+            Cái ngực phanh đầy những nét chạm trổ rồng, phượng với một ông tướng cầm chùy, cả hai cánh tay 
+            cũng thế. Trông gớm chết!
+            <br><br>
+            Hắn về hôm trước, hôm sau đã thấy ngồi ở chợ uống rượu với thịt chó suốt từ trưa đến xế chiều.
+             Rồi say khướt, hắn xách một cái vỏ chai đến cổng nhà bá Kiến, gọi tận tên tục ra mà chửi. Cụ 
+             bá không có nhà. Thấy điệu bộ hung hăng của hắn, bà cả đùn bà hai, bà hai thúc bà ba, bà ba gọi
+            bà tư, nhưng kết cục chẳng bà nào dám ra nói với hắn một vài lời phải chăng. Mắc cái phải cái 
+            thằng liều lĩnh quá, nó lại say rượu, tay nó lại lăm lăm cầm một cái vỏ chai, mà nhà lúc ấy 
+            toàn đàn bà cả... Thôi thì cứ đóng cái cổng cho thật chặt, rồi mặc thây cha nó, nó chửi thì
+            tai liền miệng đấy, chửi thì lại nghe! Thành thử chỉ có ba con chó dữ với một thằng say rượu!...
+            Thật là ầm ỹ! Hàng xóm phải một bữa điếc tai, nhưng có lẽ trong bụng thì họ hả: xưa nay họ mới
+            chỉ được nghe bà cả, bà hai, bà ba, bà tư nhà cụ bá chửi người ta, bây giờ họ mới thấy người 
+            ta chửi lại cả nhà cụ bá. Mà chửi mới sướng miệng làm sao! Mới ngoa ngắt làm sao. Họ bảo nhau:
+            Phen này cha con thằng bá Kiến đố còn dám vác mặt đi đâu nữa! Mồ mả tổ tiên đến lộn lên mất.
+            Cũng có người hiền lành hơn bảo: “Phúc đời nhà nó, chắc ông lý không có nhà...”. Ông lý đây 
+            là ông lý Cường, con giai cụ Bá nổi tiếng là hách dịch, coi người như rơm rác. Phải ông lý 
+            Cường thử có nhà xem nào! Quả nhiên họ nói có sai đâu! Đấy, có tiếng người sang sảng quát: 
+            “Mày muốn lôi thôi gì?... Cái thằng không cha không mẹ này! Mày muốn lôi thôi gì?...” Đã bảo
+            mà! Cái tiếng quát tháo kia là tiếng lý Cường. Lý Cường đã về! Lý Cường đã về! Phải biết...
+            A ha! Một cái tát rất kêu. Ôi! Cái gì thế này? Tiếng đấm tiếng đá nhau bình bịch. Thôi,
+            cứ gọi là tan xương! Bỗng “choang” một cái, thôi phải rồi, hẳn đập cái chai vào cột cổng...
+            ồ hắn kêu! Hắn vừa chửi vừa kêu làng như bị người ta cắt họng. Ồ hắn kêu!
+            <br><br>
+            - Ối làng nước ơi! Cứu tôi với... Ối làng nước ôi! Bố con thằng bá Kiến nó đâm chết tôi! Thằng lý Cường nó đâm chết tôi rồi, làng nước ôi!...
+            <br><br>
+            
+            Và họ thấy Chí Phèo lăn lộn dưới đất, vừa kêu vừa lấy mảnh chai cào vào mặt. Máu ra loe loét trông gớm quá! Mấy con chó xông vào quanh hắn, sủa rất hăng. Lý Cường hơi tái mặt, đứng nhìn mà cười nhạt, cười khinh bỉ. Hừ! Ngỡ là gì, chẳng hoá ra nằm ăn vạ! Thì ra hắn định đến đây nằm vạ!
+            <br><br>
+            
+            Người ta tuôn đến xem. Mấy cái ngõ tối xung quanh đùn ra biết bao nhiêu là người! Thật ồn ào như chợ. Bà cả, bà hai, bà ba, bà tư nhà cụ bá cũng vững dạ vì có anh lý, cũng xưng xỉa ra chửi góp. Thật ra, các bà muốn xem Chí Phèo ra làm sao? Không khéo nó có ý gieo vạ cho cụ ông phen này...
+            <br><br>
+            Nhưng kìa cụ ông đã về. Cụ cất tiếng rất sang hỏi: “Cái gì mà đông như thế này?”. Chỗ này “lạy cụ”, chỗ kia “lạy cụ”, người ta kính cẩn giãn ra, và Chí Phèo bỗng nằm dài, không nhúc nhích rên khe khẽ như gần chết.
+            <br><br>
+            Thoáng nhìn qua, đã hiểu cơ sự rồi. Làm lý trưởng rồi chánh tổng, bây giờ lại đến lượt con cụ làm lý trưởng, những việc như thế này cụ không lạ gì. Cụ hãy quát mấy bà vợ đang xưng xỉa chực tâng công với chồng:
+            <br><br>
+            - Các bà đi vào nhà: đàn bà chỉ lôi thôi, biết gì?
+            <br><br>
+            Rồi quay lại bọn người làng, cụ dịu giọng hơn một chút:
+            <br><br>
+            - Cả các ông, các bà nữa, về đi thôi chứ! Có gì mà xúm lại như thế này?
+            <br><br>
+            Không ai nói gì, người ta dần dần tản đi. Vì nể cụ bá cũng có, nhưng vì nghĩ đến sự yên ổn của mình cũng có: người nhà quê vốn ghét lôi thôi. Ai dại gì đứng ỳ ra đấy, có làm sao họ triệu mình đi làm chứng. Sau còn trơ lại Chí Phèo và cha con cụ bá. Bây giờ cụ mới lại gần hắn, khẽ lay và gọi:
+            <br><br>
+            - Anh Chí ơi! Sao anh lại làm ra thế ?
+            <br><br>
+            Chí Phèo lim dim mắt, rên lên:
+            <br><br>
+            - Tao chỉ liều chết với bố con nhà mầy đấy thôi. Nhưng tao mà chết thì có thằng sạt nghiệp, mà còn rũ tù chưa biết chừng.
+            <br><br>
+            Cụ bá cười nhạt, nhưng tiếng cười giòn giã lắm: người ta bảo cụ hơn người cũng chỉ bởi cái cười.
+            <br><br>
+            - Cái anh này nói mới hay! Ai làm gì mà anh phải chết? Đời người chứ có phải con ngoé đâu? Lại say rồi phải không?
+            <br><br>
+            Rồi đổi giọng, cụ thân mật hỏi:
+            <br><br>
+            - Về bao giờ thế? Sao không vào tôi chơi? Đi vào nhà uống nước.
+            <br><br>
+            Thấy Chí Phèo không nhúc nhích, cụ tiếp luôn:
+            <br><br>
+            - Nào đứng lên đi. Cứ vào đây uống nước đã. Có cái gì ta nói chuyện tử tế với nhau, cần gì mà phải làm thanh động lên như thế, người ngoài biết, mang tiếng cả.
+            <br><br>
+            Rồi vừa xốc Chí Phèo, cụ vừa phàn nàn:
+            <br><br>
+            - Khổ quá! Giá có tôi ở nhà thì đâu đến nỗi. Ta nói chuyện với nhau, thế nào cũng xong. Người lớn cả, chỉ một câu chuyện với nhau là đủ. Chỉ tại thằng lý Cường nóng tính không biết nghĩ trước nghĩ sau. Ai, chứ anh với nó còn có họ kia đấy.
+            <br><br>
+            Chí Phèo chẳng biết họ hàng ra làm sao, nhưng cũng thấy lòng nguôi nguôi. Hắn cố làm ra vẻ nặng nề, ngồi lên. Cụ bá biết rằng mình đã thắng, đưa mắt nháy con một cái, cụ quát:
+            <br><br>
+            - Lý Cường đâu! Tội mày đáng chết. Không bảo người ta đun nước, mau lên!
+            <br><br>
+            Cụ dắt Chí Phèo đứng dậy, giục thêm vài tiếng nữa, và Chí Phèo chịu đi: hắn chỉ cố khập khiễng cái chân như bị què. Là vì lúc ấy trong người hắn rượu đã hơi nhạt rồi, không còn kêu gào chửi bới, hắn thấy hình như không còn hăng hái nữa. Sự ngọt ngào làm mềm nhũn, vả lại những người đứng xem về cả rồi, hắn thấy hình như trơ trọi. Cái sợ cố hữu trong lòng thức dậy, cái sợ xa xôi thuở ngày xưa, hắn thấy quả là táo bạo. Không táo bạo mà dám gây sự với cha con bá Kiến, bốn đời làm tổng lý. Và nghĩ thế, hắn thấy hắn cũng oai. Hắn làm cái ông gì ở làng này? Không vây cánh, không họ hàng thân thích; anh em không có, đến bố mẹ cũng không... Ờ thế mà cũng dám độc lực chọi nhau với lý trưởng, chánh tổng, bá hộ tiên chỉ làng Vũ Đại, Chánh Hội đồng kỳ hào, huyện hào, Bắc kỳ nhân dân đại biểu, khét tiếng đến cả trong hàng huyện. Thử hỏi đã có mặt nào trong cái làng hơn hai nghìn suất đinh này làm được thế? Kể làm rồi có chết cũng là cam tâm. Vậy mà không: cái cụ bá thét ra lửa ấy lại xử nhũn, mời hắn vào nhà xơi nước. Thôi cũng hả, đã xử nhũn thì hắn vào. Nhưng bỗng hắn lại hơi ngần ngại; biết đâu cái lão cáo già này nó lại chả lừa hắn vào nhà rồi lôi thôi? Ồ mà thật có thể như thế lắm! Này nó hãy lôi ngay mấy cái mâm cái nồi hay đồ vàng đồ bạc ra khoác vào cổ hắn, rồi cho vợ ra kêu làng lên, rồi cột cổ hắn vào, chần cho một trận om xương, rồi vu cho là ăn cướp thì sao? Cái thằng bá Kiến này, già đời đục khoét, còn đớn cái nước gì mà chịu lép như trấu thế? Thôi dại gì mà vào miệng cọp, hắn cứ đứng đây này, cứ lăn ra đây này, lại kêu toáng lên xem nào. Nhưng nghĩ ngợi một tí, hắn có lăn ra kêu nữa, liệu có còn ai ra? Vả lại bây giờ rượu nhạt rồi, nếu lại phải rạch mặt mấy nhát nữa thì cũng đau. Thôi cứ vào! Vào thì vào, cần quái gì. Muốn đập đầu thì vào ngay nhà nó mà đập đầu còn hơn ở ngoài. Cùng lắm, nó có giở quẻ, hắn cũng chỉ đến đi ở tù. Ở tù thì hắn coi là thường. Thôi cứ vào.
+            <br><br>
+            Vào rồi, hắn mới biết những cái hắn sợ là hão cả. Bá Kiến quả có ý muốn dàn xếp cùng hắn thật. Không phải cụ đớn, chính thật cụ khôn róc đời, thứ nhất sợ kẻ anh hùng, thứ hai sợ kẻ cố cùng liều thân. Chí Phèo không là anh hùng, nhưng nó là cái thằng liều lĩnh. Liều lĩnh thì ai thèm chấp! Thế nào là mềm nắn rắn buông? Cái nghề làm việc quan, nếu nhất nhất cái gì cũng đè đầu ấn cổ thì lại bán nhà đi cho sớm. Cụ vẫn bảo lý Cường như thế đấy. Vũ dũng như hắn mà làm lý trưởng là nhờ có cụ. Cụ mà chết đi rồi, “chúng nó” lại không cho ăn bùn.
+            <br><br>
+            Tiếng vậy, làm tổng lý không phải việc dễ. Ở cái làng này, dân quá hai nghìn, xa phủ xa tỉnh, kể ăn thì cũng dễ ăn nhưng không phải hễ mà làm lý trưởng thì cứ việc ngồi mà khoét. Hồi năm nọ, một thầy địa lý qua đây có bảo đất làng này vào cái thế “quần ngư tranh thực”, vì thế mà bọn đàn anh chỉ là một đàn cá tranh mồi. Mồi thì ngon đấy, nhưng mà năm bè bảy mối, bè nào cũng muốn ăn. Ngoài mặt tử tế với nhau, nhưng thật ra trong bụng lúc nào cũng muốn cho nhau lụn bại để cưỡi lên đầu lên cổ. Ngay thằng Chí Phèo này đến đây sinh sự biết đâu lại không có thằng nào ẩy đến? Nếu cụ không chịu nhịn, làm cho to chuyện có khi tốn tiền. Cái nghề quan bám thằng có tóc ai bám thằng trọc đầu? Bỏ tù nó thì dễ rồi; nhưng bỏ tù nó cũng có ngày nó được ra, liệu lúc ấy nó có để mình yên không chứ? Cụ phải cái vụ thằng năm Thọ, mãi đến giờ vẫn chưa quên.
+            <br><br>
+            Năm Thọ vốn là một thằng đầu bò đầu bướu. Hồi ấy, bá Kiến mới ra làm lý trưởng, nó hình như kình nhau với lão ra mặt; lý Kiến muốn trị nhưng chưa có dịp. Được ít lâu, hắn can dự vào một vụ cướp bị bắt giam; lý Kiến ngấm ngầm vận động cho vào tù. Vẫn tưởng một người vai vế như năm Thọ mà thất cơ lỡ vận đến nỗi tội tù làm gì còn dám vác mặt mo về làng? Lý Kiến mừng thầm rằng đã nhổ được cây đinh trước mắt. Nào ngờ một buổi tối lý Kiến đang ngồi một mình soạn giấy má thì năm Thọ vác dao xộc vào. Nó đứng chặn lấy cửa và bảo: nếu kêu lên một tiếng thì đâm chết liền. Thì ra nó vượt ngục và về đây nhờ ông lý một cái thẻ mang tên một người lương thiện và một trăm đồng bạc để trốn đi. Nó lại bảo: nghe nó thì nó đi biệt, mà không nghe thì nó đâm chết, rồi muốn ra sao thì ra; còn muốn sống với vợ con thì nghe nó.
+            <br><br>
+            Lẽ tất nhiên là lý Kiến nghe, năm Thọ đi phen ấy là mất tăm, cũng không bao giờ về nữa thật. Nhưng thói đời, tre già măng mọc, có bao giờ hết những thằng du côn? Năm Thọ vừa đi, lại có binh Chức ở đâu lần về. Mà thằng này lúc nó còn ở nhà, nào nó có ngạo ngược gì cho cam! Người ta đã phải gọi hắn là cục đất. Ai bảo làm sao thì ư hữ làm vậy, mới quát một tiếng thì đã đái cả ra quần, thuế bổ một đồng thì đóng quá hai, đến nỗi có con vợ hay hay mắt, bị người ta ghẹo cũng chỉ im im rồi về nhà hành vợ chứ chẳng dám ho he gì, thế đấy: cái nghề đời hiền quá cũng hoá ngu, ở đâu chứ ở đất này đã ngu, đã nhịn thì chúng nó ấn cho đến không còn ngóc đầu lên được. Hắn làm thì làm cật lực mà quanh năm vẫn nghèo rớt mồng tơi; chỉ vì một miếng cũng không giữ được mà ăn; đứa nào nó vớ nó cũng xoay, mà đứa nào xoay thì cũng chịu. Sau cùng bực quá, hắn ra đi lính. Lại càng thêm tội! Không bực còn được vợ, tuy rằng thỉnh thoảng có bị sấy sớt ra ngoài, những vẫn là vợ mình. Bực thì hoá ra mất vợ. Bởi vì chị vợ ở nhà còn trẻ, mới hai con, cái mắt sắc như dao lại hồng hồng đôi má, bỗng nhiên sinh ra vắng chồng, của ngon trờ trờ ngay trước mắt, ai mà chịu được?
+            <br><br>
+            Nhà chị Binh ở gần đường. Ông phó đi đánh bạc ban đêm về cũng tạt vào; anh trương tuần đi tuần cũng tạt vào; anh hàng xóm cũng mò sang, thậm chí đến cái thằng hương Điền, đầu hai thứ tóc, già đời làm đầy tớ cho các ông lý trưởng, cũng mon men vào gạ gẫm. Vợ binh Chức đã nghiễm nhiên thành một con nhà thổ không phải trả tiền để bọn lý dịch trong làng chuyên đổi. Chính ngay lý Kiến, tuy hồi ấy đã có đến ba vợ, cũng không nỡ bỏ hoài cái của không dưng được trời cho; và không bỏ hoài, ông còn được lợi. Mỗi lần chị Binh đi lĩnh lương hay lĩnh măng đa của chồng, phải mượn ông lý đi nhận thực. Không ông lý nào vác của nhà đi ăn mà nhận thực cho người ta, điều ấy là cố nhiên. Nhưng với lý Kiến thì không những cơm rượu tiền túi, còn phải cho ngồi xe chung và còn ở lại tỉnh nữa.
+            <br><br>
+            Thế là mấy đồng bạc lương đi đời; mấy đứa con của chị ngày mai chỉ được mấy cái kẹo đạn mút, hay hậu hĩnh ra thì được mấy cặp bánh giầy giò ăn. Thành thử công lao anh Binh, rút lại chỉ cho chị Binh mỗi tháng một lần hưởng những cuộc vui với ông lý nhà.
+            <br><br>
+            Chẳng hiểu anh ta cũng biết thế mà chán cảnh nhà hay sao mà mãn hạn ba năm cũng không thấy trở về. Rồi ít lâu sau, có trát về làng tróc nã và áp giải tên Trần Văn Chức. Lý Kiến khai tên ấy thuộc hạng dân lưu tán không về làng. Nhưng khai hôm trước thì hôm sau hắn về. Lý Kiến sai đầy tớ đem trát đến nhà đòi hắn. Hắn đến ngay, nhưng lại dẫn theo cả vợ và hai con. Không đợi ông lý nói một câu, hắn rút con dao chọc tiết lợn ra, nhăm nhăm cầm ở tay mà bảo rằng: “Chẳng nói giấu gì ông, tôi can án giết người. Nếu ông không thương, mà bắt giải thì vợ con tôi chết đói. Thôi thì đằng nào chúng nó cũng chết, tôi đâm chúng nó chết ở đây rồi ông bắt đi ở tù luôn thể”. Mắt hắn đỏ ngầu; lưỡi dao hắn hoa lên loang loáng, chỉ trông cũng lạnh gáy. Hắn có thể giết người được lắm, mà không chỉ giết có vợ và con thôi, khi hắn có gan đâm chết vợ con thì hắn có kiêng gì cái cổ của người khác nữa? Lý Kiến nghĩ ngợi một lúc rồi bảo cứ về rồi ông liệu. Ông liệu nghĩa là ông che đậy cái án của hắn cho không ai biết và mỗi lần có trát về nhắc, ông lại khai rằng: vẫn chưa có tên Chức về. Thế là hắn nghiễm nhiên sống ở ngay chính giữa quê hương hắn. Và bây giờ người ta thấy vợ hắn rất chính chuyên mà lại trung thành, chị chăm chỉ làm ăn để nuôi hắn. Những ông trưởng, ông phó tự nhiên nghĩ bụng rằng: người ta có chồng rồi mà còn chàng màng thì phải tội; ai cũng sinh ra tử tế cả chỉ trừ anh Binh, bởi vì Chức bây giờ lại rất mực ngang ngược. Hắn ăn vườn đấy, nhưng chẳng nộp thuế cho ai. Thúc hắn thì hắn chửi, cắm vườn hắn thì hắn chém, sinh chuyện với hắn thì chính lý trưởng làng có lỗi bởi vì cố ý ẩn lậu hắn là một tên can phạm. Ấy thế mà hắn cũng chưa vừa lòng đâu. Một hôm, không hiểu nghĩ ngợi thế nào, hắn vác dao đến bảo thẳng vào mặt lý Kiến rằng:
+            <br><br>
+            - Hồi tôi còn tại ngũ, tôi gửi về nhà có trăm. Không biết vợ tôi nó tiêu pha gì hay cho trai mà không còn một đồng nào cả. Tôi hỏi nó thì nó bảo: ở nhà đàn bà con gái một mình, không dám giữ tiền, được đồng nào mang gửi ông lý cả. Tôi sợ nó bịa ra nên đã trói sẵn nó ở nhà. Bây giờ tôi đến thưa với ông, tính toán xem được bao nhiêu cho đem về nuôi cháu. Thiếu một đồng thì tôi không để yên cho chúng nó.
+            <br><br>
+            Lý Kiến hiểu rằng: “chúng nó” đây có thể gồm cả ông. Ông cười nhạt bảo rằng:
+            <br><br>
+            - Thế này này, anh Binh ạ: chị ấy gửi tôi thì quả là không có...
+            <br><br>
+            Hắn trợn mắt lên quát:
+            <br><br>
+            - Thế thì thằng nào ăn đi?
+            <br><br>
+            Lý Kiến vội nói lấp ngay:
+            <br><br>
+            - Thế nhưng mà anh có thiếu tiền thì cứ bảo tôi một tiếng. Chị ấy trót tiêu đi rồi thì có giết cũng chẳng ra. Lôi thôi làm gì sinh tội.
+            <br><br>
+            Ông mở tráp ra quăng hắn 5 đồng bạc. Hắn cầm lấy, “lạy ông” tử tế, rồi xách dao ra về. Từ hôm ấy hắn thành tử tế với lý Kiến, nhận là chỗ đầy tớ chân tay, nhưng lý Kiến thỉnh thoảng vẫn phải cho hắn tiền. Cho mãi đến năm ngoái đây, hắn chết...
+          </p>
+                     
+        </div>
+         
+        <div class="title">
+            <p> ¸¸♬·¯·♩¸¸♪·¯·♫¸¸¸♬·¯·♩¸¸♪·¯·♫¸¸</p>
+            <div class="navigation">
+              <!-- Chương trước -->
+              <div class="nav-item">
+                  <a href="./noiDungTruyen.html" class="nav-link">Chương trước</a>
+              </div>
+          
+              <!-- Danh sách -->
+              <div class="nav-item">
+                  <a href="#" class="nav-link">Danh sách</a>
+                  <ul class="dropdown">
+                      <li><a href="./noiDungTruyen.html">Chương 1</a></li>
+                      <li><a href="/views/use/chuong2.html">Chương 2</a></li>
+                      <li><a href="/views/use/chuong3.html">Chương 3</a></li>
+                  </ul>
+              </div>
+          
+              <!-- Chương sau -->
+              <div class="nav-item">
+                  <a href="/views/use/chuong2.html" class="nav-link">Chương sau</a>
+              </div>
+          </div>  
+          </div>
     
-    
-</body>
+        <div class="container3">
+            <div class="left-section">
+              <h2>Liên hệ đặt quảng cáo</h2>
+              <p>Email: loc1tulem2@gmail.com</p>
+              <p>Copyright © 2024 TruyenVN</p>
+              <h2>Miễn trừ trách nhiệm</h2>
+              <p>Trang web của chúng tôi chỉ cung cấp dịch vụ đọc truyện tranh online 
+                với mục đích giải trí và chia sẻ nội dung. Toàn bộ các truyện tranh 
+                được đăng tải trên trang web được sưu tầm từ nhiều nguồn trên internet 
+                và chúng tôi không chịu trách nhiệm về bản quyền hoặc quyền sở hữu đối
+                với bất kỳ nội dung nào. <br>  Nếu bạn là chủ sở hữu bản quyền và cho rằng nội
+                dung trên trang vi phạm quyền của bạn, vui lòng liên hệ với chúng tôi
+                để tiến hành gỡ bỏ nội dung vi phạm một cách kịp thời.</p>
+              </div>
+              <div class="right-section">
+                <a href="./theTruyen.html" class="box">Truyện Hot</a>
+                <a href="./theTruyen.html" class="box">Truyện Truyền Thuyết</a>
+                <a href="./theTruyen.html" class="box">Truyện Ngụ Ngôn</a>
+                <a href="./theTruyen.html" class="box">Truyện lịch sử Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện cổ tích Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện dân gian</a>
+                <a href="./theTruyen.html" class="box">Truyện ngụ ngôn Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện truyền thuyết</a>
+                <a href="./theTruyen.html" class="box">Truyện chữ</a>
+                <a href="./theTruyen.html" class="box">Truyện cổ xưa</a>
+                <a href="./theTruyen.html" class="box">Truyện thần thoại Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện thiếu nhi Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện ngắn Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện ma Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện kỳ bí Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện tiếu lâm Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện quê hương</a>
+                <a href="./theTruyen.html" class="box">Chuyện tình quê</a>
+                <a href="./theTruyen.html" class="box">Truyện hiện đại Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện bi kịch</a>
+                <a href="./theTruyen.html" class="box">Truyện cách mạng</a>
+                <a href="./theTruyen.html" class="box">Chuyện người Việt xa xứ</a>
+                <a href="./theTruyen.html" class="box">Truyện cảm hứng lịch sử</a>
+                <a href="./theTruyen.html" class="box">Truyện gia đình Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện cười Việt Nam</a>
+                <a href="./theTruyen.html" class="box">Truyện thiếu niên</a>
+                <a href="./theTruyen.html" class="box">Truyện lộc thành</a>
+                <a href="./theTruyen.html" class="box">Truyện thần tiên</a>
+                <a href="./theTruyen.html" class="box">Chuyện đời thật</a>
+                <a href="./theTruyen.html" class="box">Truyện ngôn luận</a>
+                <a href="./theTruyen.html" class="box">Kịch bản dân gian</a>
+                <a href="./theTruyen.html" class="box">Văn học dân gian</a>        
+            </div>
+    </body>
 </html>

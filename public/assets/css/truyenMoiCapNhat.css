@@ -27,7 +27,7 @@
   padding: 4px;
   border-radius: 5px; 
   border: 1px solid;
-  border-color: #0d706e; /* Chỉ thay đổi màu viền */
+  border-color: #0d706e; /*đổi màu viền */
 }
 
 .view-all:hover {

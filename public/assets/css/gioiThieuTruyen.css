@@ -38,7 +38,10 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+a{
+    color: #333;
+    text-decoration: none; /* Bỏ gạch chân */
+}
 table {
     width: 100%;
     border-collapse: collapse;

@@ -1,0 +1,34 @@
+/* Mặc định: Light Mode */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Dark Mode */
+body.dark-mode {
+    background-color: #3a3b3c;
+    color: #999;
+}
+body.dark-mode h2{
+    color: #999
+}
+.comment-section.dark-mode{
+    background-color: #3a3b3c;
+    color: #999;
+}
+body.dark-mode a{
+    color: #999;
+}
+body.dark-mode p{
+    color: #ffffff;
+}
+/* Icon chuyển đổi */
+.far {
+    cursor: pointer;
+    font-size: 17px;
+    transition: transform 0.3s;
+}
+
+.far:hover {
+    transform: scale(1.2);
+}

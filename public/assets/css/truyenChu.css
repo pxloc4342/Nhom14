@@ -30,6 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+   
 }
 
 .story {
@@ -40,8 +41,11 @@
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    
 }
-
+.story a{
+    text-decoration: none;
+}
 .story:hover {
     transform: scale(1.05);
     transition: 0.3s;
@@ -182,4 +186,6 @@
     font-size: 16px;
     color: #333;
     margin: 0;
+    text-emphasis: none;
+    margin-top: -4px;
 }

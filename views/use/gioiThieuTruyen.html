@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/public/assets/css/ket.css">
   <link rel="stylesheet" href="/public/assets/css/menu_dacap.css">
   <link rel="stylesheet" href="/public/assets/css/truyenChu.css">
+  <link rel="stylesheet" href="/public/assets/css/cheDoToi.css">
   <link rel="stylesheet" href="/public/assets/css/truyenMoiCapNhat.css">
   <link rel="stylesheet" href="/public/assets/css/gioiThieuTruyen.css">
   <link rel="stylesheet" href="/public/assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
@@ -295,28 +296,45 @@
         <!-- Dropdown menu -->
         <ul class="dropdown">
           <li>
-            <a href="#">Full chương</a>
+            <a href="./theTruyen.html">Full chương</a>
           </li>
           <li>
-            <a href="#">Trên 100 chương</a>
+            <a href="./theTruyen.html">Trên 100 chương</a>
           </li>
           <li>
-            <a href="#">Dưới 50 chương</a>
+            <a href="./theTruyen.html">Dưới 50 chương</a>
           </li>
           <li>
-            <a href="#">Đang ra chương</a>
+            <a href="./theTruyen.html">Đang ra chương</a>
           </li>
           <li>
-            <a href="#">Chương mới nhất</a>
+            <a href="./theTruyen.html">Chương mới nhất</a>
           </li>
         </ul>
       </li>
             
       <li class="header__navbar-item"> 
-        <a href="" class="header__navbar-item-link ">
-          <i class="f1 far fa-lightbulb" style="color: #ffcd18;"></i>
+        <a href="#" class="header__navbar-item-link">
+          <i class="f1 far fa-lightbulb" id="darkModeToggle" style="color: #ffcd18;"></i>
         </a>
-      </li>    
+      </li> 
+      
+      <script>
+        // JavaScript cho Dark Mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Xử lý sự kiện click
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Đổi icon màu để phù hợp chế độ
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.style.color = '#ffffff';
+            } else {
+                darkModeToggle.style.color = '#ffcd18';
+            }
+        });
+      </script>       
     </ul>
     </nav>
     
@@ -328,9 +346,9 @@
               <div class="stories">
                 <div class="story-container">
                   <!-- Phần trên cùng chứa ảnh và chữ -->
-                   <h3>Doraemon - Nobita Và Những Hiệp Sĩ Không Gian</h3>
+                   <h3>CHÍ PHÈO</h3>
                   <div class="top-section">
-                      <img src="/public/assets/img/27Nobita_va_nhung_hiep_si_khong_gian.jpg" alt="Ảnh truyện" class="story-image" />
+                      <img src="/public/assets/img/chi-pheo.webp" alt="Ảnh truyện" class="story-image" />
                       <div class="story-details">
                           <div class="details-left">
                               <p>Tác giả</p>
@@ -339,16 +357,16 @@
                               <p>Lượt xem</p>
                               <p class="details-left_theodoi"><a href="" style="color: white; text-decoration: none;">Theo dõi</a></p>
                               <p class="details-left_doc">
-                                <a href="" style="color: white; text-decoration: none;">Đọc từ đầu</a>                        
+                                <a href="./noiDungTruyen.html" style="color: white; text-decoration: none;">Đọc từ đầu</a>                        
                               </p>
                           </div>
                           <div class="details-right">
-                              <p>Fujiko F. Fujio</p>
+                              <p>Nam Cao</p>
                               <p>Hoàn Thành</p>
-                              <p><a href="">Action</a> - <a href="">Adventure</a> - <a href="">Fantasy</a></p>
+                              <p><a href="">Truyện ngắn</a> - <a href="">Hiện thực phê phán</a></p>
                               <p>134.388</p>
                               <p>60.361 Người Đã Theo Dõi</p>
-                              <p class="details-left_doc"><a href="" style="color: white; text-decoration: none;">Đọc mới nhất</a></p>
+                              <p class="details-left_doc"><a href="./chuong3.html" style="color: white; text-decoration: none;">Đọc mới nhất</a></p>
                           </div>
                       </div>
                   </div>
@@ -356,13 +374,11 @@
                   <!-- Nội dung truyện -->
                   <div class="story-content">
                       <h3>Nội dung truyện:</h3>
-                      <p>"Một ngày nọ, khi cả nhóm bạn đang háo hức hóa thân thành những siêu anh
-                         hùng vũ trụ, Nobita lại cảm thấy buồn bã vì bị giao vai quái vật. Tuy nhiên,
-                          với sự giúp đỡ của Doraemon và món bảo bối "Đạo diễn Burger", cậu bé đã có 
-                          cơ hội tham gia vào cuộc phiêu lưu đầy thú vị. Cùng với các bạn, Nobita đã 
-                          đến hành tinh Pokkoru và giúp người dân nơi đây chống lại âm mưu độc ác của
-                          bọn hải tặc vũ trụ. Qua cuộc phiêu lưu này, tình bạn giữa các thành viên 
-                          trong nhóm đã trở nên khăng khít hơn bao giờ hết."</p>
+                      <p>Chủ đề chính của câu chuyện này là phê phán xã hội phong kiến ngày xưa. 
+                        Trong truyện, có những sự xuất hiện của con người và nhân vật. Hơn nữa, nhà 
+                        văn Nam Cao đã đề cao và khẳng định những phẩm chất tốt đẹp, cao quý của Chí 
+                        Phèo – Thị Nở. Câu chuyện này đã nói lên sự xung đột vô cùng quyết liệt của 
+                        các tầng lớp khác nhau trong xã hội phong kiến.</p>
                   </div>
               
                   <!-- Danh sách chương -->
@@ -377,15 +393,15 @@
                           </thead>
                           <tbody>
                               <tr>
-                                  <td>Chương 1</td>
+                                  <td><a href="./noiDungTruyen.html">Chương 1</a></td>
                                   <td>2024-12-08</td>
                               </tr>
                               <tr>
-                                  <td>Chương 2</td>
+                                  <td><a href="./chuong2.html">Chương 2</a></td>
                                   <td>2024-12-09</td>
                               </tr>
                               <tr>
-                                  <td>Chương 3</td>
+                                  <td><a href="./chuong3.html">Chương 3</a></td>
                                   <td>2024-12-10</td>
                               </tr>
                           </tbody>
@@ -648,38 +664,38 @@
         để tiến hành gỡ bỏ nội dung vi phạm một cách kịp thời.</p>
       </div>
       <div class="right-section">
-        <a href="#" class="box">Truyện Hot</a>
-        <a href="#" class="box">Truyện Truyền Thuyết</a>
-        <a href="#" class="box">Truyện Ngụ Ngôn</a>
-        <a href="#" class="box">Truyện lịch sử Việt Nam</a>
-        <a href="#cotich" class="box">Truyện cổ tích Việt Nam</a>
-        <a href="#dangian" class="box">Truyện dân gian</a>
-        <a href="#ngungon" class="box">Truyện ngụ ngôn Việt Nam</a>
-        <a href="#truyenthuyet" class="box">Truyện truyền thuyết</a>
-        <a href="#lichsu" class="box">Truyện chữ</a>
-        <a href="#coxua" class="box">Truyện cổ xưa</a>
-        <a href="#thanthoai" class="box">Truyện thần thoại Việt Nam</a>
-        <a href="#thieunhi" class="box">Truyện thiếu nhi Việt Nam</a>
-        <a href="#ngan" class="box">Truyện ngắn Việt Nam</a>
-        <a href="#ma" class="box">Truyện ma Việt Nam</a>
-        <a href="#kybi" class="box">Truyện kỳ bí Việt Nam</a>
-        <a href="#tieulam" class="box">Truyện tiếu lâm Việt Nam</a>
-        <a href="#quehuong" class="box">Truyện quê hương</a>
-        <a href="#tinhque" class="box">Chuyện tình quê</a>
-        <a href="#hienDai" class="box">Truyện hiện đại Việt Nam</a>
-        <a href="#bikich" class="box">Truyện bi kịch</a>
-        <a href="#cachmang" class="box">Truyện cách mạng</a>
-        <a href="#xaxu" class="box">Chuyện người Việt xa xứ</a>
-        <a href="#camhung" class="box">Truyện cảm hứng lịch sử</a>
-        <a href="#giadinh" class="box">Truyện gia đình Việt Nam</a>
-        <a href="#truyencuoi" class="box">Truyện cười Việt Nam</a>
-        <a href="#thieunien" class="box">Truyện thiếu niên</a>
-        <a href="#locthanh" class="box">Truyện lộc thành</a>
-        <a href="#truyenthantien" class="box">Truyện thần tiên</a>
-        <a href="#chuyendoidat" class="box">Chuyện đời thật</a>
-        <a href="#ngonluan" class="box">Truyện ngôn luận</a>
-        <a href="#kichban" class="box">Kịch bản dân gian</a>
-        <a href="#vanhocdanian" class="box">Văn học dân gian</a>        
-      </div>
+        <a href="./theTruyen.html" class="box">Truyện Hot</a>
+        <a href="./theTruyen.html" class="box">Truyện Truyền Thuyết</a>
+        <a href="./theTruyen.html" class="box">Truyện Ngụ Ngôn</a>
+        <a href="./theTruyen.html" class="box">Truyện lịch sử Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện cổ tích Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện dân gian</a>
+        <a href="./theTruyen.html" class="box">Truyện ngụ ngôn Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện truyền thuyết</a>
+        <a href="./theTruyen.html" class="box">Truyện chữ</a>
+        <a href="./theTruyen.html" class="box">Truyện cổ xưa</a>
+        <a href="./theTruyen.html" class="box">Truyện thần thoại Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện thiếu nhi Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện ngắn Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện ma Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện kỳ bí Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện tiếu lâm Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện quê hương</a>
+        <a href="./theTruyen.html" class="box">Chuyện tình quê</a>
+        <a href="./theTruyen.html" class="box">Truyện hiện đại Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện bi kịch</a>
+        <a href="./theTruyen.html" class="box">Truyện cách mạng</a>
+        <a href="./theTruyen.html" class="box">Chuyện người Việt xa xứ</a>
+        <a href="./theTruyen.html" class="box">Truyện cảm hứng lịch sử</a>
+        <a href="./theTruyen.html" class="box">Truyện gia đình Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện cười Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện thiếu niên</a>
+        <a href="./theTruyen.html" class="box">Truyện lộc thành</a>
+        <a href="./theTruyen.html" class="box">Truyện thần tiên</a>
+        <a href="./theTruyen.html" class="box">Chuyện đời thật</a>
+        <a href="./theTruyen.html" class="box">Truyện ngôn luận</a>
+        <a href="./theTruyen.html" class="box">Kịch bản dân gian</a>
+        <a href="./theTruyen.html" class="box">Văn học dân gian</a>        
+    </div>
 </body>
 </html>

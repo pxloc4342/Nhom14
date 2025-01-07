@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="/public/assets/css/menu_dacap.css">
   <link rel="stylesheet" href="/public/assets/css/truyenChu.css">
   <link rel="stylesheet" href="/public/assets/css/truyenMoiCapNhat.css">
+  <link rel="stylesheet" href="/public/assets/css/cheDoToi.css">
+  <link rel="stylesheet" href="/public/assets/js/cheDoToi.js">
   <link rel="stylesheet" href="/public/assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
 </head>
 <body>
@@ -157,13 +159,29 @@
             </li>
           </ul>
         </li>
-              
-        <li class="header__navbar-item"> 
-          <a href="" class="header__navbar-item-link ">
-            <i class="f1 far fa-lightbulb" style="color: #ffcd18;"></i>
-          </a>
-        </li> 
-        
+               
+          <li class="header__navbar-item"> 
+            <a href="#" class="header__navbar-item-link">
+              <i class="f1 far fa-lightbulb" id="darkModeToggle" style="color: #ffcd18;"></i>
+            </a>
+          </li> 
+          
+          <script>
+            // JavaScript cho Dark Mode
+            const darkModeToggle = document.getElementById('darkModeToggle');
+
+            // Xử lý sự kiện click
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                
+                // Đổi icon màu để phù hợp chế độ
+                if (document.body.classList.contains('dark-mode')) {
+                    darkModeToggle.style.color = '#ffffff';
+                } else {
+                    darkModeToggle.style.color = '#ffcd18';
+                }
+            });
+          </script>     
       </ul>
       </nav>
   </div>
@@ -436,49 +454,49 @@
                   <div class="story">
                     <a href="./gioiThieuTruyen.html">
                       <img src="/public/assets/img/10canhdongbattan.jpg" alt="Truyện 1" class="story-image">
-                      <p class="story-title">Cánh đồng bất tận</p>
+                      <a class="story-title">Cánh đồng bất tận</a>
                     </a>
                   </div>
                   <div class="story">
                     <a href="./gioiThieuTruyen.html">
                       <img src="/public/assets/img/26tamcam.jpg" alt="Truyện 2" class="story-image">
-                      <p class="story-title">Tấm cám</p>
+                      <a class="story-title">Tấm cám</a>
                     </a>
                   </div>
                   <div class="story">
                     <a href="./gioiThieuTruyen.html">
                       <img src="/public/assets/img/13matbiec.jpg" alt="Truyện 3" class="story-image">
-                      <p class="story-title">Mắt biếc</p>
+                      <a class="story-title">Mắt biếc</a>
                     </a>
                   </div>
                   <div class="story">
                     <a href="./gioiThieuTruyen.html">
                       <img src="/public/assets/img/23banhtrungbanhgiay.jpg" alt="Truyện 4" class="story-image">
-                      <p class="story-title">Bánh trưng bánh dày</p>
+                      <a class="story-title">Bánh trưng bánh dày</a>
                     </a>
                   </div>
                   <div class="story">
                     <a href="./gioiThieuTruyen.html">
                       <img src="/public/assets/img/14.demen.jpg" alt="Truyện 1" class="story-image">
-                      <p class="story-title">Dế mèn phiêu lưu ký</p>
+                      <a class="story-title">Dế mèn phiêu lưu ký</a>
                     </a>
                 </div>
                 <div class="story">
                   <a href="./gioiThieuTruyen.html">
                     <img src="/public/assets/img/19sodo.jpg" alt="Truyện 2" class="story-image">
-                    <p class="story-title">Số đỏ</p>
+                    <a class="story-title">Số đỏ</a>
                   </a>
                 </div>
                 <div class="story">
                   <a href="./gioiThieuTruyen.html">
                     <img src="/public/assets/img/21thanhgiong.jpg" alt="Truyện 3" class="story-image">
-                    <p class="story-title">Vợ nhặt</p>
+                    <a class="story-title">Vợ nhặt</a>
                   </a>
                 </div>
                 <div class="story">
                   <a href="./gioiThieuTruyen.html">
                     <img src="/public/assets/img/17vonhat.jpg" alt="Truyện 4" class="story-image">
-                    <p class="story-title">Vợ nhặt</p>
+                    <a class="story-title">Vợ nhặt</a>
                   </a>
                 </div>                
               </div>
