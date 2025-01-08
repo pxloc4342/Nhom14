@@ -1,0 +1,702 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/public/assets/css/main.css">
+  <link rel="stylesheet" href="/public/assets/css/3_slide.css">
+  <link rel="stylesheet" href="/public/assets/css/base.css">
+  <link rel="stylesheet" href="/public/assets/css/DkDn.css">
+  <link rel="stylesheet" href="/public/assets/css/ket.css">
+  <link rel="stylesheet" href="/public/assets/css/menu_dacap.css">
+  <link rel="stylesheet" href="/public/assets/css/truyenChu.css">
+  <link rel="stylesheet" href="/public/assets/css/cheDoToi.css">
+  <link rel="stylesheet" href="/public/assets/css/truyenMoiCapNhat.css">
+  <link rel="stylesheet" href="/public/assets/css/gioiThieuTruyen.css">
+  <link rel="stylesheet" href="/public/assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">      
+    <nav class="header__navbar1">
+      <ul class="header__navbar-list1">
+        <div class="header-white-search">
+          <div class="header__logo">
+            <div class="header__logo-img">
+              <a href="./truyen.html" class="header__logo-img-book"><i class="fas fa-book-open" style="color: #ffffff;"></i></a>
+              <a href="./truyen.html"><img src="/public/assets/img/8.jpg" alt="fđ" width="160px" header="220px"> </a>
+            </div>
+          </div>
+        </div>
+      </ul>
+      <!--Tìm kiếm-->
+      <ul class="header__navbar-list1">
+        <div class="form">
+        <form action="" id="search-box">
+          <input type="text" id="search-text" placeholder="Tìm truyện...">
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+        </div>
+      </ul>
+      <ul class="header_navbar-list1">
+        <li class="header_navbar-item1">
+          <a href="#" class="tk header_navbar-item2" style="color: #fff;">
+            <i class="fas fa-user"></i> Tài khoản <i class="fas fa-sort-down"></i>
+          </a>
+          <!-- Menu con -->
+          <div class="box-submenu">
+            <ul>
+              <li><a href="#" class="dn">Đăng nhập</a></li>
+              <li><a href="#" class="dk">Đăng ký</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <!--Phương thức-->
+          <!--Đăng ký / Đăng nhập-->
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+
+    <div class="modal__body">
+        <!-- Đăng ký -->
+      <div class="auth-form">
+        <div class="auth-form__container">
+          <div class="auth-form__header">
+            <h3 class="authu-form__heading">Đăng ký</h3>
+            <span class="auth-form__switch-btn">Đăng nhập</span>
+          </div>
+       <div class="auth-form__forn">
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Name.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
+         </div>
+         <div class="auth-from__group">
+           <input type="text" class="auth-form__input" placeholder="Xác nhận mật khẩu.">
+         </div>
+       </div>
+       <!--cmt-->
+       <div class="auth-form__aside">
+         <p class="auth-form__policy-text">
+           Bằng việc đăng ký, bạn đã đồng ý với "Truyện VN" về <br>
+           <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+           <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
+         </p>
+        </div>
+         <!--Nút-->
+         <div class="auth-form__controls">
+          <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+          <button class="btn btn--ptimary">ĐĂNG KÝ</button>
+        </div>
+
+         </div>
+         <!--đk bằng fb & gg-->
+          <div class="auth-form__socilas">
+             <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
+                <i class="auth-form__socilas-icon fab fa-facebook-f"></i>
+                 Kết nối với Facebook
+             </a>
+             <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AeZLP99FebRJ5pW6PrrUJsxY7SEFZLrB_BBW-k5pHFNuGkGk2tqeq8Zh42Rm9QJuGHKyGigJHg-wNg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2147375664%3A1735290431472750&ddm=1" class="auth-form__socilas--google btn btn--size-s btn--with-icon">
+                <i class="auth-form__socilas-icon fab fa-google"></i>
+                 Kết nối với Google
+           </a>
+          </div>
+        </div>
+      </div>
+      
+      <script>// Lấy các phần tử cần thiết
+        const modal = document.getElementById('modal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const openModalBtn = document.querySelector('.dk');
+        const closeModalBtn = document.querySelector('.auth-form__controls-back');
+        
+        // Hiển thị modal khi bấm nút "Đăng ký"
+        openModalBtn.addEventListener('click', function (event) {
+            event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+            modal.classList.add('active');
+        });
+        
+        // Ẩn modal khi bấm vào overlay
+        modalOverlay.addEventListener('click', function () {
+            modal.classList.remove('active');
+        });
+        
+        // Ẩn modal khi bấm nút "TRỞ LẠI"
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', function (event) {
+                event.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+                modal.classList.remove('active');
+            });
+        } else {
+            console.error('Nút "TRỞ LẠI" không tìm thấy!');
+        }
+        
+      </script>
+
+    </div>
+    <div class="modal1" id="modal1">
+      <div class="modal__overlay" id="modalOverlay"></div>
+  
+      <div class="modal__body1">
+          <!-- Đăng ký -->
+        <div class="auth-form">
+          <div class="auth-form__container1">
+            <div class="auth-form__header1">
+              <h3 class="authu-form__heading1">Đăng nhập </h3>
+              <span class="auth-form__switch-btn1">Đăng ký</span>
+            </div>
+         <div class="auth-form__forn">
+           <div class="auth-from__group">
+             <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
+           </div>
+           <div class="auth-from__group">
+             <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
+           </div>
+         </div>
+         <!--cmt-->
+         <div class="auth-form__aside">
+           <p class="auth-form__policy-text">
+             Bằng việc đăng nhập, bạn đã đồng ý với "Truyện VN" về <br>
+             <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+             <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
+           </p>
+          </div>
+           <!--Nút-->
+           <div class="auth-form__controls">
+            <button class="btn auth-form__controls-back" id="backLogin">TRỞ LẠI</button>
+            <button class="btn btn--primary">ĐĂNG NHẬP</button>
+          </div>
+           </div>
+         
+           <!--đk bằng fb & gg-->
+            <div class="auth-form__socilas">
+               <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
+                  <i class="auth-form__socilas-icon fab fa-facebook-f"></i>
+                   Kết nối với Facebook
+               </a>
+               <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AeZLP99FebRJ5pW6PrrUJsxY7SEFZLrB_BBW-k5pHFNuGkGk2tqeq8Zh42Rm9QJuGHKyGigJHg-wNg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2147375664%3A1735290431472750&ddm=1" class="auth-form__socilas--google btn btn--size-s btn--with-icon">
+                  <i class="auth-form__socilas-icon fab fa-google"></i>
+                   Kết nối với Google
+             </a>
+            </div>
+          </div>
+        </div>
+        <script>// Lấy các phần tử cần thiết
+          const loginModal = document.getElementById("modal1");
+          const loginOverlay = document.getElementById("modal1Overlay");
+          const loginButton = document.querySelector(".dn");
+          const backLoginButton = document.getElementById("backLogin");
+          
+          // Hiển thị modal đăng nhập
+          loginButton.addEventListener("click", function (event) {
+              event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+              loginModal.style.display = "block";
+          });
+          
+          // Ẩn modal khi bấm "TRỞ LẠI" hoặc overlay
+          backLoginButton.addEventListener("click", function () {
+              loginModal.style.display = "none";
+          });
+          
+          loginOverlay.addEventListener("click", function () {
+              loginModal.style.display = "none";
+          });
+          
+        </script>
+    </div>
+
+    </nav>   
+  </header>
+   
+    <!--Dòng 2-->  
+    <nav class="header__navbar">
+    <ul class="header__navbar-list">
+      <li class="header__navbar-item"> 
+        <a href="./truyen.html" class="header__navbar-item-link1">
+          <i class="fas fa-home" style="color: #0d6f6e;" ></i>
+        </a> 
+      </li> 
+      <li class="header__navbar-item">
+        <a href="#" class="header__navbar-item-link">
+          <i class="f1 fas fa-list-ul"></i> Thể loại <i class="fas fa-sort-down"></i>
+        </a>
+        <!-- Menu con -->
+        <div class="dropdown-menu">
+          <ul class="dropdown-list">
+            <li><a href="./theTruyen.html">Truyện cổ tích</a></li>
+            <li><a href="./theTruyen.html">Truyện ngụ ngôn</a></li>
+            <li><a href="./theTruyen.html">Truyện cười</a></li>
+            <li><a href="./theTruyen.html">Tiểu thuyết</a></li>
+            <li><a href="./theTruyen.html">Truyện ngắn</a></li>
+            <li><a href="./theTruyen.html">Truyện truyền thuyết</a></li>
+            <li><a href="./theTruyen.html">Truyện thơ</a></li>
+            <li><a href="./theTruyen.html">Truyện tâm lý xã hội</a></li>
+            <li><a href="./theTruyen.html">Truyện kinh dị - Giả tưởng</a></li>
+            <li><a href="./theTruyen.html">Truyện ký sự - Tự truyện</a></li>
+            <li><a href="./theTruyen.html">Truyện dành cho thiếu nhi</a></li>
+            <li><a href="./theTruyen.html">Truyện khoa học - Giáo dục</a></li>
+          </ul>
+        </div>
+      </li>
+      
+
+      <li class="header__navbar-item">
+        <a href="#" class="header__navbar-item-link">
+          <i class="f1 fas fa-list-ul"></i> Xếp hạng <i class="fas fa-sort-down"></i>
+        </a>
+        <!-- Menu con -->
+        <div class="dropdown-menu">
+          <ul class="dropdown-list">
+            <!-- Mục con cấp 1 -->
+            <li class="dropdown-item">
+              <a href="#">Theo Lượt Đọc</a>
+              <!-- Menu con cấp 2 -->
+              <ul class="sub-dropdown">
+                <li><a href="./theTruyen.html ">Trong tuần</a></li>
+                <li><a href=" ./theTruyen.html">Trong tháng</a></li>
+                <li><a href="./theTruyen.html ">Mọi thời đại</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-item">
+              <a href="#">Theo Đánh Giá</a>
+              <ul class="sub-dropdown">
+                <li><a href="./theTruyen.html">Đánh giá cao nhất</a></li>
+                <li><a href="./theTruyen.html">Được yêu thích</a></li>
+                <li><a href="./theTruyen.html">Nhiều bình luận nhất</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-item">
+              <a href="#">Theo Thể Loại</a>
+              <ul class="sub-dropdown">
+                <li><a href="./theTruyen.html">Cổ tích</a></li>
+                <li><a href="./theTruyen.html">Truyện ngắn</a></li>
+                <li><a href="./theTruyen.html">Tiểu thuyết</a></li>
+                <li><a href="./theTruyen.html">Kinh dị</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+      
+      
+      <li class="header__navbar-item"> 
+        <a href="./theTruyen.html" class="header__navbar-item-link ">
+          <i class="f1 fas fa-font"></i> Truyện chữ
+        </a>
+      </li>
+         
+      <li class="header__navbar-item">
+        <a href="#" class="header__navbar-item-link">
+          <i class="f1 fas fa-list-ul"></i> Phân loại theo chương <i class="fas fa-sort-down"></i>
+        </a>
+        <!-- Dropdown menu -->
+        <ul class="dropdown">
+          <li>
+            <a href="./theTruyen.html">Full chương</a>
+          </li>
+          <li>
+            <a href="./theTruyen.html">Trên 100 chương</a>
+          </li>
+          <li>
+            <a href="./theTruyen.html">Dưới 50 chương</a>
+          </li>
+          <li>
+            <a href="./theTruyen.html">Đang ra chương</a>
+          </li>
+          <li>
+            <a href="./theTruyen.html">Chương mới nhất</a>
+          </li>
+        </ul>
+      </li>
+            
+      <li class="header__navbar-item"> 
+        <a href="#" class="header__navbar-item-link">
+          <i class="f1 far fa-lightbulb" id="darkModeToggle" style="color: #ffcd18;"></i>
+        </a>
+      </li> 
+      
+      <script>
+        // JavaScript cho Dark Mode
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Xử lý sự kiện click
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            // Đổi icon màu để phù hợp chế độ
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeToggle.style.color = '#ffffff';
+            } else {
+                darkModeToggle.style.color = '#ffcd18';
+            }
+        });
+      </script>       
+    </ul>
+    </nav>
+    
+    
+    <nav class="web-truyen">
+      <div class="container">
+          <!-- Khu vực danh sách truyện -->
+          <div class="story-list">
+              <div class="stories">
+                <div class="story-container">
+                  <!-- Phần trên cùng chứa ảnh và chữ -->
+                   <h3>SOLO LEVELING</h3>
+                  <div class="top-section">
+                      <img src="/public/assets/img/01images.jfif" alt="Ảnh truyện" class="story-image" />
+                      <div class="story-details">
+                          <div class="details-left">
+                              <p>Tác giả</p>
+                              <p>Tình trạng</p>
+                              <p>Thể loại</p>
+                              <p>Lượt xem</p>
+                              <p class="details-left_theodoi"><a href="" style="color: white; text-decoration: none;">Theo dõi</a></p>
+                              <p class="details-left_doc">
+                                <a href="./truyenAnh.html" style="color: white; text-decoration: none;">Đọc từ đầu</a>                        
+                              </p>
+                          </div>
+                          <div class="details-right">
+                              <p>Jang Sung Lak</p>
+                              <p>Hoàn Thành</p>
+                              <p><a href="./theTruyen.html">Action</a> - <a href="./theTruyen.html">Adventure</a> - <a href="./theTruyen.html">Shounen</a></p>
+                              <p>134.388</p>
+                              <p>60.361 Người Đã Theo Dõi</p>
+                              <p class="details-left_doc"><a href="./truyenAnh3.html" style="color: white; text-decoration: none;">Đọc mới nhất</a></p>
+                          </div>
+                      </div>
+                  </div>
+              
+                  <!-- Nội dung truyện -->
+                  <div class="story-content">
+                      <h3>Nội dung truyện:</h3>
+                      <p>Solo Leveling lấy bối cảnh về một thế giới hiện đại giả tưởng. Tại đây tồn tại những
+                        cánh cổng kết nối tới những hầm ngục với đầy rẫy những quái vật nguy hiểm. Tuy vậy, bên 
+                        trong những cánh cổng bí ẩn này cũng chứa rất nhiều những tài nguyên quý hiếm và chính
+                        phủ các nước đều muốn khai thác chúng. Vì lí do này, các tổ chức thợ săn tập hợp những 
+                        con người được thức tỉnh ( những người có sức mạnh phi thường) đã được thành lập nhằm 
+                        chinh phạt các cánh cổng nói trên.</p>
+                  </div>
+              
+                  <!-- Danh sách chương -->
+                  <div class="chapter-list">
+                      <h3>Danh sách chương:</h3>
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>Số chương</th>
+                                  <th>Ngày cập nhật</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td><a href="./truyenAnh.html">Chương 1</a></td>
+                                  <td>2024-12-08</td>
+                              </tr>
+                              <tr>
+                                  <td><a href="./truyenAnh2.html">Chương 2</a></td>
+                                  <td>2024-12-09</td>
+                              </tr>
+                              <tr>
+                                  <td><a href="./truyenAnh3.html">Chương 3</a></td>
+                                  <td>2024-12-10</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="comment-section">
+                    <h3>Bình luận:</h3>
+                    <!-- Form nhập bình luận -->
+                    <div class="comment-form">
+                        <textarea placeholder="Viết bình luận của bạn..." class="comment-input"></textarea>
+                        <button class="btn comment-submit">Gửi bình luận</button>
+                    </div>
+                
+                    <!-- Danh sách bình luận -->
+                    <div class="comment-list">
+                        <div class="comment">
+                            <p><strong>Người dùng 1:</strong> Nội dung bình luận 1...</p>
+                        </div>
+                        <div class="comment">
+                            <p><strong>Người dùng 2:</strong> Nội dung bình luận 2...</p>
+                        </div>
+                    </div>
+                </div>
+                
+              </div>               
+            </div>  
+          </div>
+  
+          <!-- Khu vực bảng xếp hạng -->
+          <div class="ranking">
+            <h2>Bảng Xếp Hạng</h2>
+            <div class="ranking-tabs">
+                <div class="ranking-tab active" data-tab="month">Top Tháng</div>
+                <div class="ranking-tab" data-tab="week">Top Tuần</div>
+                <div class="ranking-tab" data-tab="day">Top Ngày</div>
+            </div>
+            <ul class="ranking-list active" id="month">
+                <li class="ranking-item">
+                    <span class="ranking-number" style="color: #FFBF00;">01</span>
+                    <div class="ranking-image">
+                        <img src="/public/assets/img/15mualarung.jpg" alt="Truyện A">
+                    </div>
+                    <div class="ranking-details">
+                        <a href="#" class="ranking-title">Truyện A (Tháng)</a>
+                        <p class="ranking-chapters">20 Chapters</p>
+                    </div>
+                </li>
+                <li class="ranking-item">
+                    <span class="ranking-number" style="color: #808080;">02</span>
+                    <div class="ranking-image">
+                        <img src="/public/assets/img/16nhungngaythoau.jpg" alt="Truyện B">
+                    </div>
+                    <div class="ranking-details">
+                        <a href="#" class="ranking-title">Truyện B (Tháng)</a>
+                        <p class="ranking-chapters">15 Chapters</p>
+                    </div>
+                </li>
+                <li class="ranking-item">
+                  <span class="ranking-number" style="color: #D2691E;">03</span>
+                  <div class="ranking-image">
+                      <img src="/public/assets/img/17vonhat.jpg" alt="Truyện A">
+                  </div>
+                  <div class="ranking-details">
+                      <a href="#" class="ranking-title">Truyện A (Tháng)</a>
+                      <p class="ranking-chapters">20 Chapters</p>
+                  </div>
+              </li>
+              <li class="ranking-item">
+                  <span class="ranking-number">04</span>
+                  <div class="ranking-image">
+                      <img src="/public/assets/img/18nhatkytrongtu.jpg" alt="Truyện B">
+                  </div>
+                  <div class="ranking-details">
+                      <a href="#" class="ranking-title">Truyện B (Tháng)</a>
+                      <p class="ranking-chapters">15 Chapters</p>
+                  </div>
+              </li>
+              <li class="ranking-item">
+                <span class="ranking-number">05</span>
+                <div class="ranking-image">
+                    <img src="/public/assets/img/19sodo.jpg" alt="Truyện A">
+                </div>
+                <div class="ranking-details">
+                    <a href="#" class="ranking-title">Truyện A (Tháng)</a>
+                    <p class="ranking-chapters">20 Chapters</p>
+                </div>
+            </li>         
+            <li class="ranking-item">
+              <span class="ranking-number">06</span>
+              <div class="ranking-image">
+                  <img src="/public/assets/img/20datrungphuongnam.jpg" alt="Truyện A">
+              </div>
+              <div class="ranking-details">
+                  <a href="#" class="ranking-title">Truyện A (Tháng)</a>
+                  <p class="ranking-chapters">20 Chapters</p>
+              </div>
+          </li> 
+            </ul>
+            <ul class="ranking-list" id="week">
+                <li class="ranking-item">
+                    <span class="ranking-number" style="color: #FFBF00;">01</span>
+                    <div class="ranking-image">
+                        <img src="/public/assets/img/13matbiec.jpg" alt="Truyện C">
+                    </div>
+                    <div class="ranking-details">
+                        <a href="#" class="ranking-title">Truyện C (Tuần)</a>
+                        <p class="ranking-chapters">18 Chapters</p>
+                    </div>
+                </li>
+                <li class="ranking-item">
+                    <span class="ranking-number" style="color: #808080;">02</span>
+                    <div class="ranking-image">
+                        <img src="/public/assets/img/16nhungngaythoau.jpg" alt="Truyện D">
+                    </div>
+                    <div class="ranking-details">
+                        <a href="#" class="ranking-title">Truyện D (Tuần)</a>
+                        <p class="ranking-chapters">12 Chapters</p>
+                    </div>
+                </li>
+                <li class="ranking-item">
+                  <span class="ranking-number" style="color: #D2691E;">03</span>
+                  <div class="ranking-image">
+                      <img src="/public/assets/img/17vonhat.jpg" alt="Truyện C">
+                  </div>
+                  <div class="ranking-details">
+                      <a href="#" class="ranking-title">Truyện C (Tuần)</a>
+                      <p class="ranking-chapters">18 Chapters</p>
+                  </div>
+              </li>
+              <li class="ranking-item">
+                  <span class="ranking-number">04</span>
+                  <div class="ranking-image">
+                      <img src="/public/assets/img/18nhatkytrongtu.jpg" alt="Truyện D">
+                  </div>
+                  <div class="ranking-details">
+                      <a href="#" class="ranking-title">Truyện D (Tuần)</a>
+                      <p class="ranking-chapters">12 Chapters</p>
+                  </div>
+              </li>
+              <li class="ranking-item">
+                <span class="ranking-number">05</span>
+                <div class="ranking-image">
+                    <img src="/public/assets/img/10canhdongbattan.jpg" alt="Truyện C">
+                </div>
+                <div class="ranking-details">
+                    <a href="#" class="ranking-title">Truyện C (Tuần)</a>
+                    <p class="ranking-chapters">18 Chapters</p>
+                </div>
+              </li>
+              <li class="ranking-item">
+                <span class="ranking-number">06</span>
+                <div class="ranking-image">
+                    <img src="/public/assets/img/11toixin1vevetuoitho.jpg" alt="Truyện D">
+                </div>
+                <div class="ranking-details">
+                    <a href="#" class="ranking-title">Truyện D (Tuần)</a>
+                    <p class="ranking-chapters">12 Chapters</p>
+                </div>
+              </li>
+            </ul>
+            <ul class="ranking-list" id="day">
+                <li class="ranking-item">
+                    <span class="ranking-number" style="color: #FFBF00;">01</span>
+                    <div class="ranking-image">
+                        <img src="/public/assets/img/26tamcam.jpg" alt="Truyện E">
+                    </div>
+                    <div class="ranking-details">
+                        <a href="#" class="ranking-title">Truyện E (Ngày)</a>
+                        <p class="ranking-chapters">10 Chapters</p>
+                    </div>
+                </li>
+                <li class="ranking-item">
+                    <span class="ranking-number" style="color: #808080;">02</span>
+                    <div class="ranking-image">
+                        <img src="/public/assets/img/14langlesapa.jpg" alt="Truyện F">
+                    </div>
+                    <div class="ranking-details">
+                        <a href="#" class="ranking-title">Truyện F (Ngày)</a>
+                        <p class="ranking-chapters">8 Chapters</p>
+                    </div>
+                </li>
+                <li class="ranking-item">
+                  <span class="ranking-number" style="color: #D2691E;">03</span>
+                  <div class="ranking-image">
+                      <img src="/public/assets/img/12matbiec.jpg" alt="Truyện E">
+                  </div>
+                  <div class="ranking-details">
+                      <a href="#" class="ranking-title">Truyện E (Ngày)</a>
+                      <p class="ranking-chapters">10 Chapters</p>
+                  </div>
+              </li>
+              <li class="ranking-item">
+                  <span class="ranking-number">04</span>
+                  <div class="ranking-image">
+                      <img src="/public/assets/img/22conrongchautien.jpg" alt="Truyện F">
+                  </div>
+                  <div class="ranking-details">
+                      <a href="#" class="ranking-title">Truyện F (Ngày)</a>
+                      <p class="ranking-chapters">8 Chapters</p>
+                  </div>
+              </li>
+              <li class="ranking-item">
+                <span class="ranking-number">05</span>
+                <div class="ranking-image">
+                    <img src="/public/assets/img/2chaucau.jpg" alt="Truyện E">
+                </div>
+                <div class="ranking-details">
+                    <a href="#" class="ranking-title">Truyện E (Ngày)</a>
+                    <p class="ranking-chapters">10 Chapters</p>
+                </div>
+            </li>
+            <li class="ranking-item">
+                <span class="ranking-number">06</span>
+                <div class="ranking-image">
+                    <img src="/public/assets/img/4hoguom.jpg" alt="Truyện F">
+                </div>
+                <div class="ranking-details">
+                    <a href="#" class="ranking-title">Truyện F (Ngày)</a>
+                    <p class="ranking-chapters">8 Chapters</p>
+                </div>
+            </li>
+            </ul>
+        </div>
+      
+        <script>
+            // JavaScript để quản lý chuyển tab
+            const tabs = document.querySelectorAll('.ranking-tab');
+            const lists = document.querySelectorAll('.ranking-list');
+    
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Xóa class active khỏi các tab và danh sách
+                    tabs.forEach(t => t.classList.remove('active'));
+                    lists.forEach(list => list.classList.remove('active'));
+    
+                    // Thêm class active cho tab và danh sách được chọn
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        </script>
+
+  </div>
+</nav>
+
+
+  <div class="container3">
+    <div class="left-section">
+      <h2>Liên hệ đặt quảng cáo</h2>
+      <p>Email: loc1tulem2@gmail.com</p>
+      <p>Copyright © 2024 TruyenVN</p>
+      <h2>Miễn trừ trách nhiệm</h2>
+      <p>Trang web của chúng tôi chỉ cung cấp dịch vụ đọc truyện tranh online 
+        với mục đích giải trí và chia sẻ nội dung. Toàn bộ các truyện tranh 
+        được đăng tải trên trang web được sưu tầm từ nhiều nguồn trên internet 
+        và chúng tôi không chịu trách nhiệm về bản quyền hoặc quyền sở hữu đối
+        với bất kỳ nội dung nào. <br>  Nếu bạn là chủ sở hữu bản quyền và cho rằng nội
+        dung trên trang vi phạm quyền của bạn, vui lòng liên hệ với chúng tôi
+        để tiến hành gỡ bỏ nội dung vi phạm một cách kịp thời.</p>
+      </div>
+      <div class="right-section">
+        <a href="./theTruyen.html" class="box">Truyện Hot</a>
+        <a href="./theTruyen.html" class="box">Truyện Truyền Thuyết</a>
+        <a href="./theTruyen.html" class="box">Truyện Ngụ Ngôn</a>
+        <a href="./theTruyen.html" class="box">Truyện lịch sử Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện cổ tích Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện dân gian</a>
+        <a href="./theTruyen.html" class="box">Truyện ngụ ngôn Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện truyền thuyết</a>
+        <a href="./theTruyen.html" class="box">Truyện chữ</a>
+        <a href="./theTruyen.html" class="box">Truyện cổ xưa</a>
+        <a href="./theTruyen.html" class="box">Truyện thần thoại Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện thiếu nhi Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện ngắn Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện ma Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện kỳ bí Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện tiếu lâm Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện quê hương</a>
+        <a href="./theTruyen.html" class="box">Chuyện tình quê</a>
+        <a href="./theTruyen.html" class="box">Truyện hiện đại Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện bi kịch</a>
+        <a href="./theTruyen.html" class="box">Truyện cách mạng</a>
+        <a href="./theTruyen.html" class="box">Chuyện người Việt xa xứ</a>
+        <a href="./theTruyen.html" class="box">Truyện cảm hứng lịch sử</a>
+        <a href="./theTruyen.html" class="box">Truyện gia đình Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện cười Việt Nam</a>
+        <a href="./theTruyen.html" class="box">Truyện thiếu niên</a>
+        <a href="./theTruyen.html" class="box">Truyện lộc thành</a>
+        <a href="./theTruyen.html" class="box">Truyện thần tiên</a>
+        <a href="./theTruyen.html" class="box">Chuyện đời thật</a>
+        <a href="./theTruyen.html" class="box">Truyện ngôn luận</a>
+        <a href="./theTruyen.html" class="box">Kịch bản dân gian</a>
+        <a href="./theTruyen.html" class="box">Văn học dân gian</a>        
+    </div>
+</body>
+</html>

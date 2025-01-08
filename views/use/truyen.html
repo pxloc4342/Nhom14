@@ -131,7 +131,7 @@
         
         
         <li class="header__navbar-item"> 
-          <a href="" class="header__navbar-item-link ">
+          <a href="./trang1.html" class="header__navbar-item-link ">
             <i class="f1 fas fa-font"></i> Truyện chữ
           </a>
         </li>
@@ -185,109 +185,7 @@
       </ul>
       </nav>
   </div>
-  <nav class="slide">
-    <h2>Truyện Hot</h2>
-    <div class="slide-container">
-        <button class="arrow-left"><i class="fas fa-arrow-left"></i></button>
-        <div class="slide-show">
-            <div class="list-images">
-                <a class="images" href="./gioiThieuTruyen.html">
-                    <img src="/public/assets/img/2chaucau.jpg" alt="Chầu cau">
-                    <p>Chầu cau</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                    <img src="/public/assets/img/6ngkhonkho.jpg" alt="Những người khốn khổ">
-                    <p>Những người khốn khổ</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                    <img src="/public/assets/img/12matbiec.jpg" alt="Mắt biếc">
-                    <p>Mắt biếc</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                    <img src="/public/assets/img/19sodo.jpg" alt="Sổ đổ">
-                    <p>Số đỏ</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                    <img src="/public/assets/img/18nhatkytrongtu.jpg" alt="Nhật ký trong tù">
-                    <p>Nhật ký trong tù</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                    <img src="/public/assets/img/17vonhat.jpg" alt="Vợ nhặt">
-                    <p>Vợ nhặt</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                  <img src="/public/assets/img/22conrongchautien.jpg" alt="Con rồng cháu tiên">
-                  <p>Con rồng cháu tiên</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                  <img src="/public/assets/img/4hoguom.jpg" alt="Hồ gươm">
-                  <p>Sự tích hồ gươm</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                  <img src="/public/assets/img/25caytre100dot.jpg" alt="Cây tre trăm đốt">
-                  <p>Cây tre trăm đốt</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                  <img src="/public/assets/img/26tamcam.jpg" alt="Tấm cám">
-                  <p>Tấm cám</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                  <img src="/public/assets/img/21thanhgiong.jpg" alt="Thánh gióng">
-                  <p>Thánh gióng</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                  <img src="/public/assets/img/13rungxanu.jpg" alt="Rừng xà nu">
-                  <p>Rừng xà nu</p>
-                </a>
-                <a class="images" href="./gioiThieuTruyen.html">
-                  <img src="/public/assets/img/14.demen.jpg" alt="Dế mèn phưu lưu ký">
-                  <p>Dế mèn phiêu lưu ký</p>
-              </a>
-            </div>
-        </div>
-        <button class="arrow-right"><i class="fas fa-arrow-right"></i></button>
-    </div>
-    <!--java truyen hot-->
-  <script>
-    // JavaScript
-    const slideShow = document.querySelector('.list-images');
-       const arrowLeft = document.querySelector('.arrow-left');
-       const arrowRight = document.querySelector('.arrow-right');
-       const images = document.querySelectorAll('.images');
-
-       let currentIndex = 0;
-       const imageWidth = document.querySelector('.images').offsetWidth + 20; // Kích thước ảnh + khoảng cách
-       const totalImages = images.length;
-
-       // Hàm cập nhật vị trí
-       function updatePosition() {
-           slideShow.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-       }
-
-       // Hàm cuộn sang phải
-       arrowRight.addEventListener('click', () => {
-           currentIndex++;
-           if (currentIndex > 6) {
-               currentIndex = 0; // Quay lại ảnh đầu
-           }
-           updatePosition();
-       });
-
-       // Hàm cuộn sang trái
-       arrowLeft.addEventListener('click', () => {
-           currentIndex--;
-           if (currentIndex < 0) {
-               currentIndex = 7; // Quay lại "truyện thứ 8"
-           }
-           updatePosition();
-       });
-
-       // Tự động cuộn mỗi 4 giây
-       setInterval(() => {
-           arrowRight.click();
-       }, 4000);
- </script>
-  </nav>
+  
 
   <!--Đăng ký / Đăng nhập-->
   <div class="modal" id="modal">
@@ -444,6 +342,110 @@
           
         </script>
     </div>
+
+    <nav class="slide">
+      <h2>Truyện Hot</h2>
+      <div class="slide-container">
+          <button class="arrow-left"><i class="fas fa-arrow-left"></i></button>
+          <div class="slide-show">
+              <div class="list-images">
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                      <img src="/public/assets/img/2chaucau.jpg" alt="Chầu cau">
+                      <p>Chầu cau</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                      <img src="/public/assets/img/6ngkhonkho.jpg" alt="Những người khốn khổ">
+                      <p>Những người khốn khổ</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                      <img src="/public/assets/img/12matbiec.jpg" alt="Mắt biếc">
+                      <p>Mắt biếc</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                      <img src="/public/assets/img/19sodo.jpg" alt="Sổ đổ">
+                      <p>Số đỏ</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                      <img src="/public/assets/img/18nhatkytrongtu.jpg" alt="Nhật ký trong tù">
+                      <p>Nhật ký trong tù</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                      <img src="/public/assets/img/17vonhat.jpg" alt="Vợ nhặt">
+                      <p>Vợ nhặt</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                    <img src="/public/assets/img/22conrongchautien.jpg" alt="Con rồng cháu tiên">
+                    <p>Con rồng cháu tiên</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                    <img src="/public/assets/img/4hoguom.jpg" alt="Hồ gươm">
+                    <p>Sự tích hồ gươm</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                    <img src="/public/assets/img/25caytre100dot.jpg" alt="Cây tre trăm đốt">
+                    <p>Cây tre trăm đốt</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                    <img src="/public/assets/img/26tamcam.jpg" alt="Tấm cám">
+                    <p>Tấm cám</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                    <img src="/public/assets/img/21thanhgiong.jpg" alt="Thánh gióng">
+                    <p>Thánh gióng</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                    <img src="/public/assets/img/13rungxanu.jpg" alt="Rừng xà nu">
+                    <p>Rừng xà nu</p>
+                  </a>
+                  <a class="images" href="./gioiThieuTruyenAnh.html">
+                    <img src="/public/assets/img/14.demen.jpg" alt="Dế mèn phưu lưu ký">
+                    <p>Dế mèn phiêu lưu ký</p>
+                </a>
+              </div>
+          </div>
+          <button class="arrow-right"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <!--java truyen hot-->
+    <script>
+      // JavaScript
+      const slideShow = document.querySelector('.list-images');
+         const arrowLeft = document.querySelector('.arrow-left');
+         const arrowRight = document.querySelector('.arrow-right');
+         const images = document.querySelectorAll('.images');
+  
+         let currentIndex = 0;
+         const imageWidth = document.querySelector('.images').offsetWidth + 20; // Kích thước ảnh + khoảng cách
+         const totalImages = images.length;
+  
+         // Hàm cập nhật vị trí
+         function updatePosition() {
+             slideShow.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+         }
+  
+         // Hàm cuộn sang phải
+         arrowRight.addEventListener('click', () => {
+             currentIndex++;
+             if (currentIndex > 6) {
+                 currentIndex = 0; // Quay lại ảnh đầu
+             }
+             updatePosition();
+         });
+  
+         // Hàm cuộn sang trái
+         arrowLeft.addEventListener('click', () => {
+             currentIndex--;
+             if (currentIndex < 0) {
+                 currentIndex = 7; // Quay lại "truyện thứ 8"
+             }
+             updatePosition();
+         });
+  
+         // Tự động cuộn mỗi 4 giây
+         setInterval(() => {
+             arrowRight.click();
+         }, 4000);
+   </script>
+    </nav>
 
     <nav class="web-truyen">
         <div class="container">
