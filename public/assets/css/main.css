@@ -191,7 +191,7 @@
 }
 .auth-form__aside{
     margin-top: 18px;
-    margin-bottom: 70px;
+    margin-bottom: 55px;
 }
 .auth-form__policy-text{
     font-size: 0.8rem;
@@ -204,10 +204,12 @@
     text-decoration: none;
     
 }
+
 .auth-form__controls{
     display: flex;
     justify-content: flex-end;
 }
+
 /*Đăng nhập*/
 .modal1 {
     display: none;
@@ -236,16 +238,20 @@
     margin-top: 10px;
 }
 /*fb, gg*/
+
 .auth-form__socilas{
     background-color: #ebebeb ;
     margin-top: 25px; 
-    padding: 12px 36px;
+    padding: 12px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
+
 .auth-form__controls-back{
     margin-right: 8px;
+
 }
 .auth-form__socilas-icon{
     margin-right: 5px;
@@ -254,6 +260,7 @@
 .auth-form__socilas--facebook{
     color: white;
     background-color: #3a5a98;
+    
 }
 .auth-form__socilas--facebook,
 .auth-form__socilas-icon{

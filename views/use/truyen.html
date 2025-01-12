@@ -188,61 +188,80 @@
   </div>
   
 
-  <!--Đăng ký / Đăng nhập-->
+  <!--Đăng ký -->
   <div class="modal" id="modal">
     <div class="modal__overlay" id="modalOverlay"></div>
-
+  
     <div class="modal__body">
-        <!-- Đăng ký -->
+      <!-- Đăng ký -->
       <div class="auth-form">
         <div class="auth-form__container">
           <div class="auth-form__header">
-            <h3 class="authu-form__heading">Đăng ký</h3>
+            <h3 class="auth-form__heading">Đăng ký</h3>
             <span class="auth-form__switch-btn">Đăng nhập</span>
           </div>
-       <div class="auth-form__forn">
-         <div class="auth-from__group">
-           <input type="text" class="auth-form__input" placeholder="Name.">
-         </div>
-         <div class="auth-from__group">
-           <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
-         </div>
-         <div class="auth-from__group">
-           <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
-         </div>
-         <div class="auth-from__group">
-           <input type="text" class="auth-form__input" placeholder="Xác nhận mật khẩu.">
-         </div>
-       </div>
-       <!--cmt-->
-       <div class="auth-form__aside">
-         <p class="auth-form__policy-text">
-           Bằng việc đăng ký, bạn đã đồng ý với "Truyện VN" về <br>
-           <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
-           <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
-         </p>
-        </div>
-         <!--Nút-->
-         <div class="auth-form__controls">
-          <button class="btn auth-form__controls-back">TRỞ LẠI</button>
-          <button class="btn btn--ptimary">ĐĂNG KÝ</button>
-        </div>
-
-         </div>
-         <!--đk bằng fb & gg-->
-          <div class="auth-form__socilas">
-             <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
-                <i class="auth-form__socilas-icon fab fa-facebook-f"></i>
-                 Kết nối với Facebook
-             </a>
-             <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AeZLP99FebRJ5pW6PrrUJsxY7SEFZLrB_BBW-k5pHFNuGkGk2tqeq8Zh42Rm9QJuGHKyGigJHg-wNg&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-2147375664%3A1735290431472750&ddm=1" class="auth-form__socilas--google btn btn--size-s btn--with-icon">
-                <i class="auth-form__socilas-icon fab fa-google"></i>
-                 Kết nối với Google
-           </a>
-          </div>
+  
+          <!-- Form -->
+          <form class="auth-form__form" action="/views/use/reg.php" method="post">
+            <div class="auth-form__group">
+              <input
+                type="text"
+                class="auth-form__input"
+                name="fullname"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="auth-form__group">
+              <input
+                type="email"
+                class="auth-form__input"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="auth-form__group">
+              <input
+                type="password"
+                class="auth-form__input"
+                name="password"
+                placeholder="Mật khẩu"
+                required
+              />
+            </div>
+            <div class="auth-form__group">
+              <input
+                type="password"
+                class="auth-form__input"
+                name="confirm_password"
+                placeholder="Xác nhận mật khẩu"
+                required
+              />
+            </div>
+  
+            <!-- Chính sách -->
+            <div class="auth-form__aside">
+              <p class="auth-form__policy-text">
+                Bằng việc đăng ký, bạn đã đồng ý với "Truyện VN" về
+                <br />
+                <a href="#" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                <a href="#" class="auth-form__text-link">Chính sách bảo mật</a>.
+              </p>
+            </div>
+  
+            <!-- Nút -->
+            <div class="auth-form__controls">
+              <button type="button" class="btn auth-form__controls-back">TRỞ LẠI</button>
+              <button type="submit" class="btn btn--primary">Đăng ký</button>
+            </div>
+          </form>
+  
         </div>
       </div>
-      
+    </div>
+  
+    
       <script>// Lấy các phần tử cần thiết
         const modal = document.getElementById('modal');
         const modalOverlay = document.getElementById('modalOverlay');
@@ -270,43 +289,35 @@
             console.error('Nút "TRỞ LẠI" không tìm thấy!');
         }
         
-      </script>
-
+     </script>
+    </div> 
     </div>
+       <!--Đăng nhập-->
     <div class="modal1" id="modal1">
       <div class="modal__overlay" id="modalOverlay"></div>
-  
       <div class="modal__body1">
-          <!-- Đăng ký -->
         <div class="auth-form">
           <div class="auth-form__container1">
             <div class="auth-form__header1">
               <h3 class="authu-form__heading1">Đăng nhập </h3>
               <span class="auth-form__switch-btn1">Đăng ký</span>
             </div>
-         <div class="auth-form__forn">
-           <div class="auth-from__group">
-             <input type="text" class="auth-form__input" placeholder="Email hoặc Sđt.">
-           </div>
-           <div class="auth-from__group">
-             <input type="text" class="auth-form__input" placeholder="Mật khẩu.">
-           </div>
-         </div>
-         <!--cmt-->
-         <div class="auth-form__aside">
-           <p class="auth-form__policy-text">
-             Bằng việc đăng nhập, bạn đã đồng ý với "Truyện VN" về <br>
-             <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
-             <a href="" class="auth-form__text-link">Chính sách bảo mật.</a>
-           </p>
-          </div>
-           <!--Nút-->
-           <div class="auth-form__controls">
-            <button class="btn auth-form__controls-back" id="backLogin">TRỞ LẠI</button>
-            <button class="btn btn--primary">ĐĂNG NHẬP</button>
-          </div>
-           </div>
-         
+            
+            <div class="auth-form__forn" action="'/views/use/login.php'" method="POST">
+              
+                <div class="auth-from__group">
+                  <input type="text" name="email" class="auth-form__input" placeholder="Email hoặc Sđt." required>
+                </div>
+                <div class="auth-from__group">
+                  <input type="password" name="password" class="auth-form__input" placeholder="Mật khẩu." required>
+                </div>
+                <div class="auth-form__controls">
+                  <button type="button" class="btn auth-form__controls-back" id="backLogin">TRỞ LẠI</button>
+                  <button type="submit" class="btn btn--primary">ĐĂNG NHẬP</button>
+                </div>
+              
+            </div>
+          
            <!--đk bằng fb & gg-->
             <div class="auth-form__socilas">
                <a href="https://www.facebook.com/" class="auth-form__socilas--facebook btn btn--size-s btn--with-icon">
@@ -320,6 +331,8 @@
             </div>
           </div>
         </div>
+      
+
         <script>// Lấy các phần tử cần thiết
           const loginModal = document.getElementById("modal1");
           const loginOverlay = document.getElementById("modal1Overlay");
