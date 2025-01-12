@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['fullname'] = $user['fullname'];
-            header("Location: /dashboard.php"); // Điều hướng đến trang dashboard
+            header("Location: /views/use/truyen.html"); // Điều hướng đến trang dashboard
             exit;
         } else {
             echo "<script>alert('Sai mật khẩu!');</script>";
