@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/public/assets/css/truyenMoiCapNhat.css">
   <link rel="stylesheet" href="/public/assets/css/cheDoToi.css">
   <link rel="stylesheet" href="/public/assets/js/cheDoToi.js">
+  <link rel="stylesheet" href="/public/assets/css/dangXuat.css">
   <link rel="stylesheet" href="/public/assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
 </head>
 <body>
@@ -39,20 +40,19 @@
           </div>
       </ul>
       
-        <ul class="header_navbar-list1">
-          <li class="header_navbar-item1">
-            <a href="#" class="tk header_navbar-item2" style="color: #fff;">
-              <i class="fas fa-user"></i> Tài khoản <i class="fas fa-sort-down"></i>
-            </a>
-            <!-- Menu con -->
-            <div class="box-submenu">
-              <ul>
-                <li><a href="#" class="dn">Đăng nhập</a></li>
-                <li><a href="#" class="dk">Đăng ký</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+      <ul class="header_navbar-list1">
+        <li class="header_navbar-item1 tk">
+          <a href="#" class="header_navbar-item2"style="color: #fff;">
+            <i class="fas fa-user"></i> Tài khoản <i class="fas fa-sort-down"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <!-- Tên người dùng -->
+            <li><a href="/thong-tin.php">Thông tin tài khoản</a></li>
+            <li><a href="/models/htdocs/dangXuat.php">Đăng xuất</a></li>
+          </ul>
+        </li>
+      </ul>
+      
         <!--Phương thức-->
       
        <!--Tài khoản-->
@@ -303,7 +303,7 @@
               <h3 class="authu-form__heading1">Đăng nhập</h3>
               <span class="auth-form__switch-btn1">Đăng ký</span>
             </div>
-            <form action="/views/use/login.php" method="POST">
+            <form action="/models/htdocs/login.php" method="POST">
               <div class="auth-form__forn">
                 <div class="auth-from__group">
                   <input type="text" name="email" class="auth-form__input" placeholder="Email hoặc Sđt.">

@@ -1,49 +1,47 @@
 <?php
-// Kết nối tới cơ sở dữ liệu
 $servername = "127.0.0.1:4306";
-$username = "root"; // Thay bằng username của bạn
-$password = ""; // Thay bằng mật khẩu của bạn
-$dbname = "unitop-store-data"; // Tên database
+$username = "root";
+$password = "";
+$dbname = "unitop-store-data";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Kiểm tra kết nối
 if ($conn->connect_error) {
     die("Kết nối thất bại: " . $conn->connect_error);
 }
 
-// Kiểm tra nếu form được submit
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Kiểm tra email có tồn tại không
-    $sql = "SELECT * FROM users WHERE email = ?";
+    $sql = "SELECT fullname, password FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        // Lấy dữ liệu người dùng
         $user = $result->fetch_assoc();
-
-        // So sánh mật khẩu
-        if (password_verify($password, $user['password'])) {
-            // Khởi tạo session sau khi đăng nhập thành công
+        $hashed_password = $user['password']; // Lấy mật khẩu đã mã hóa từ cơ sở dữ liệu
+    
+        // Kiểm tra mật khẩu người dùng nhập vào có đúng không
+        if (password_verify($password, $hashed_password)) {
             session_start();
-            $_SESSION['user_id'] = $user['id'];
             $_SESSION['fullname'] = $user['fullname'];
-            header("Location: /views/use/truyen.html"); // Điều hướng đến trang dashboard
+            header("Location: /views/use/truyenDaDangNhap.html");
             exit;
         } else {
-            echo "<script>alert('Sai mật khẩu!');</script>";
+            echo '<a href="/views/use/truyen.html">Trang Chủ</a> ';
+            echo "<br> Sai mật khẩu!";  
         }
     } else {
-        echo "<script>alert('Email không tồn tại!');</script>";
+        echo '<a href="/views/use/truyen.html">Trang Chủ</a> ';
+        echo "<br> Email không tồn tại!";  
     }
-
+    
+    
     $stmt->close();
+    
 }
 
 $conn->close();
